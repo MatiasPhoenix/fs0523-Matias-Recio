@@ -1,0 +1,64 @@
+:root {
+    font-family: serif, Arial, sans-serif;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.header {
+    text-align: center;
+}
+
+.immage {
+    width: 200px;
+    padding: 10px;
+}
+
+.under-title {
+    margin-top: line;
+    color: rgb(8, 85, 8);
+    font-size: 0.8rem;
+    background-color: rgb(250, 246, 208);
+    padding: 10px;
+    border-top: solid;
+    border-color: rgb(250, 226, 119);
+}
+
+.foto {
+    width: 100%;
+}
+
+.figcaption{
+    text-align: center;
+    color: gray;
+}
+
+.featured {
+    
+    border-left: solid;
+    border-color: orange;
+    line-height: 0rem;
+    margin-bottom: 80px;
+    margin-top: 50px;
+    
+}
+.featured- {
+    color: orange;
+    margin-left: 20px;
+
+}
+
+.list {
+    line-height: 1.8rem;
+}
+
+.articolo{
+   margin: 0 auto;
+   width: 800px;
+}
+.sub-titles {
+    border-bottom: solid;
+    border-color: aqua;
+    border-width: 1px;
+    padding-bottom: 20px;
+}
