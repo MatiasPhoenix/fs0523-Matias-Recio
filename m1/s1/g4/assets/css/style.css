@@ -10,12 +10,27 @@ body {
     
 }
 
+.corsivo {
+    font-style: italic;
+}
+
 h1, h2, h3, h4, h5, h6 {
     
     font-family: 'Poppins', sans-serif;
 }
 h1 {
     font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.1rem
+    font-weight: bold;
 }
 
 /* HEADER */
@@ -45,6 +60,10 @@ h1 {
     margin-top: 30px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 
+}
+
+.ref-articolo {
+    color: rgb(172, 170, 170);
 }
 
 .testo-viola {
@@ -95,14 +114,17 @@ ol>li:before {
 }
 
 .articolo-finale {
-    background-color: rgb(201, 198, 198);
+    background-color: rgb(233, 227, 227);
     padding: 25px;
     border: solid 0.5px grey;
+    margin-bottom: 15px;
+  
 }
+
 
 .data-pub {
     padding: 10px;
-    object-position: right;
+    
 }
 
 /* FOOTER */
