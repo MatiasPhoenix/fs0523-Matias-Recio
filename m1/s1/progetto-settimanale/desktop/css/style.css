@@ -8,7 +8,7 @@ body {
 }
 
 /*SPECIAL DIV */
-footer, nav, section, article { 
+nav, section, article { 
     text-align: center;
 }
 
@@ -188,4 +188,10 @@ footer>div>span>a {
     color: #c8e7f0; 
     padding-top: 40px;
 } 
+
+.foot {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
