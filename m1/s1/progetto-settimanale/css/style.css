@@ -1,7 +1,7 @@
 /* Your styles here */
 
 a {
-    text-decoration: none;
+    
     color: white;
 }
 
@@ -25,32 +25,45 @@ header {
     background-color: black;
 }
 
+header>img {
+    width: 150px;
+    padding: 30px;
+}
+
 nav {
     background-image: url(../images/banner.jpg);
     background-position: center;
-    padding: 50px;
+    background-size: 150%;
+    padding: 70px 50px;
 }
 
 nav>p {
-    padding: 25px;
+    padding: 40px 30px;
 }
 
 nav>a {
-    padding: 20px 45px;
+    padding: 18px 40px;
+    border: 10px 10px;
     background-color: #f04c2f; 
     font-family: 'Montserrat', sans-serif , bold;
-    
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+
 }
 
 /*H's ARMY*/
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-family: 'Montserrat', sans-serif , bold;
     line-height: 1.1;
 }
 h2 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
+    padding: 30px;
+    color: white;
 }
 h3 {
     font-size: 1.4rem;
@@ -66,8 +79,19 @@ h2, h3 {
 }
 
 /*MAIN*/
-main>div>p {
-    padding: 25px;
+main>div>div>p {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+main>div>img {
+    border-radius: 1000px 1000px 1000px 1000px;
+    padding-top: 30px;
+    width: 320px;
+}
+
+.main-page {
+    padding-top: 40px;
+    padding-bottom: 70px;
 }
 
 /*ARTICLES*/
@@ -87,8 +111,33 @@ article>p {
     
 }
 
+article>img {
+    width: 100%;
+}
+
+/*SECTION*/
+
 section {
     background-color: #e22d0e;
+    color: white;
+    padding: 40px;
+}
+
+section>p {
+    font-style: italic;
+}
+
+
+
+section>div{
+    padding-top: 30px;
+    font-size: 1.5rem;
+}
+
+
+
+section p:last-child{
+    font-size: 1rem;
 }
 
 /*FOOTER*/
