@@ -1,5 +1,7 @@
 /* Your styles here */
-
+ul {
+    list-style-type:none;
+}
 body {
     color: #393d41;
     font-size: 1.2rem;
@@ -129,7 +131,7 @@ article>img {
 section {
     background-color: #e22d0e;
     color: white;
-    padding: 45px 40px;
+    padding: 95px 40px;
 }
 
 section>p {
@@ -139,12 +141,12 @@ section>p {
 
 section>div{
     padding-top: 30px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 
 section p:last-child{
-    font-size: 1rem;
+    font-size: 0.7rem;
 }
 
 .article-ep {
@@ -163,7 +165,7 @@ footer>h2 {
     padding: 15px;
 }
 
-footer, footer>div>p>a {
+footer, footer>div>div>p>a {
    color: #c8e7f0; 
 }
 
@@ -178,13 +180,13 @@ footer>div {
 }
 
 
-footer>div>span {
+footer>div>div>span {
     font-size: 1.1rem;
     padding-top: 10px;
     border-top: 1px solid #c8e7f0;
 }
 
-footer>div>span>a {
+footer>div>div>span>a {
     color: #c8e7f0; 
     padding-top: 40px;
 } 
