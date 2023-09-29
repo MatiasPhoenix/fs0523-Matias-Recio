@@ -33,6 +33,11 @@ h3 {
     font-weight: bold;
 }
 
+h4 {
+    font-size: 0.8rem
+    font-weight: bold;
+}
+
 /* HEADER */
 .header {
     background-color: rgba(3,109,134,1);
@@ -80,6 +85,10 @@ h3 {
     border-radius: 5px 5px 5px 5px;
 }
 
+.testo-centrale {
+    text-align: center;
+}
+
 /* ELEMENTI NEL MAIN - ARTICLE */
 ol {
     counter-reset: item 0;
@@ -105,7 +114,9 @@ ol>li:before {
 }
 
 /* TABELLE */
-
+.tabella {
+    margin: 20px auto;
+}
 /* FORM */
 
 /* ELEMENTI NELL' ASIDE */
@@ -128,10 +139,13 @@ ol>li:before {
 }
 
 /* FOOTER */
-.footer {
-    margin: 20px;
-   text-align: center;
-   background-color: linear-gradient(top rgba(3,109,134,1), rgb(0,160,198));
-   
+footer {
+    background: rgb(53,53,53);
+    background: linear-gradient(0deg, rgba(53,53,53,1) 0%, rgba(5,85,103,1) 68%);
+    box-shadow: 0 3px 3px #444;
+    color: #f0f0f0;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
