@@ -1,0 +1,108 @@
+/* Your styles here */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    color: #393d41;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
+}
+
+/*SPECIAL DIV */
+.page {
+    text-align: center;
+}
+
+/*HEADER & TOP PAGE*/
+header {
+    color:  #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    background-color: black;
+}
+
+nav {
+    background-image: url(../images/banner.jpg);
+    background-position: center;
+    padding: 50px;
+}
+
+nav>p {
+    padding: 25px;
+}
+
+nav>a {
+    padding: 20px 45px;
+    background-color: #f04c2f; 
+    font-family: 'Montserrat', sans-serif , bold;
+    
+}
+
+/*H's ARMY*/
+
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif , bold;
+    line-height: 1.1;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.4rem;
+}
+h1, h3 {
+    color: #25a2c3;
+}
+h2, h3 {
+    
+    padding-top: 30px;
+    font-family: 'Montserrat', sans-serif , bold;
+    
+}
+
+/*MAIN*/
+main>div>p {
+    padding: 25px;
+}
+
+/*ARTICLES*/
+
+article {
+    
+    margin: 35px;
+    border: 1px solid #dee1e3;
+}
+
+article>h3 {
+    padding-top: 10px;
+}
+
+article>p {
+    padding: 5px 25px 35px 25px;
+    
+}
+
+section {
+    background-color: #e22d0e;
+}
+
+/*FOOTER*/
+
+footer {
+    color: #c8e7f0;
+    background-color: #25a2c3;
+}
+
+
+footer>link {
+   color: #c8e7f0; 
+}
+
+/*footer>heading {
+    color: white;
+}*/
