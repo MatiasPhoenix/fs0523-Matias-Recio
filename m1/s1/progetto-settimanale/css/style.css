@@ -2,7 +2,7 @@
 
 a {
     
-    color: white;
+    
 }
 
 body {
@@ -21,29 +21,30 @@ body {
 header {
     color:  #25a2c3;
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.5;
+    line-height: 1.4;
     background-color: black;
 }
 
 header>img {
-    width: 150px;
-    padding: 30px;
+    width: 160px;
+    padding: 40px;
 }
 
 nav {
     background-image: url(../images/banner.jpg);
     background-position: center;
     background-size: 150%;
-    padding: 70px 50px;
+    padding: 65px 50px;
 }
 
 nav>p {
-    padding: 40px 30px;
+    font-size: 1.4rem;
+    padding-top: 30px;
+    padding-bottom: 45px;
 }
 
 nav>a {
     padding: 18px 40px;
-    border: 10px 10px;
     background-color: #f04c2f; 
     font-family: 'Montserrat', sans-serif , bold;
     border-radius: 5px 5px 5px 5px;
@@ -58,15 +59,16 @@ nav>a {
 h1 {
     font-size: 2.8rem;
     font-family: 'Montserrat', sans-serif , bold;
-    line-height: 1.1;
+    line-height: 1;
 }
 h2 {
-    font-size: 2.2rem;
-    padding: 30px;
+    font-size: 2.3rem;
+    padding: 25px;
     color: white;
 }
 h3 {
     font-size: 1.4rem;
+    padding-bottom: 10px;
 }
 h1, h3 {
     color: #25a2c3;
@@ -115,18 +117,18 @@ article>img {
     width: 100%;
 }
 
+
 /*SECTION*/
 
 section {
     background-color: #e22d0e;
     color: white;
-    padding: 40px;
+    padding: 45px 40px;
 }
 
 section>p {
     font-style: italic;
 }
-
 
 
 section>div{
@@ -135,23 +137,49 @@ section>div{
 }
 
 
-
 section p:last-child{
     font-size: 1rem;
 }
 
+.article-ep {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
 /*FOOTER*/
 
 footer {
-    color: #c8e7f0;
+    padding-top: 20px;
+    padding-bottom: 10px;
     background-color: #25a2c3;
 }
 
+footer>h2 {
+    padding: 15px;
+}
 
-footer>link {
+footer, footer>div>p>a {
    color: #c8e7f0; 
 }
 
-/*footer>heading {
+footer>div>p {
+    font-size: 1.35rem;
+}
+.fas {
     color: white;
-}*/
+}
+footer>div {
+    padding-bottom: 40px;
+}
+
+
+footer>div>span {
+    font-size: 1.1rem;
+    padding-top: 10px;
+    border-top: 1px solid white;
+}
+
+footer>div>span>a {
+    color: #c8e7f0; 
+    padding-top: 40px;
+} 
+
