@@ -8,7 +8,7 @@ body {
 }
 
 /*SPECIAL DIV */
-.page {
+footer, nav, section, article { 
     text-align: center;
 }
 
@@ -27,15 +27,15 @@ header>img {
 
 nav {
     background-image: url(../images/banner.jpg);
-    background-position: center;
-    background-size: 150%;
-    padding: 65px 50px;
+    background-size: 100%;
+    background-position-y: -70px;
+    padding: 220px 250px;
 }
 
 nav>p {
     font-size: 1.4rem;
-    padding-top: 30px;
-    padding-bottom: 45px;
+   
+    padding: 40px 250px;
 }
 
 nav>a {
@@ -80,21 +80,32 @@ main>div>div>p {
     padding-left: 40px;
     padding-right: 40px;
 }
-main>div>img {
+main>div>div>img {
     border-radius: 1000px 1000px 1000px 1000px;
-    padding-top: 30px;
-    width: 320px;
+    width: 450px;
 }
 
 .main-page {
-    padding-top: 40px;
-    padding-bottom: 70px;
+    padding: 150px 150px;
+    
+}
+.block {
+    display: inline-block;
+    
+}
+
+.block.text {
+    padding-left: 80px;
+    
 }
 
 /*ARTICLES*/
 
 article {
     
+    width: 500px;
+    padding-left: auto;
+    padding-right: auto;
     margin: 35px;
     border: 1px solid #dee1e3;
 }
