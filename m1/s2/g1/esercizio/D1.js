@@ -86,7 +86,16 @@ console.log (x - 4);
  EXTRA: verifica che la loro uguaglianza diventi true se entrambe vengono trasformate in lowercase (senza cambiare il valore di name2!).
 */
 
+//valori determinati 
 let name1 = "john";
 let name2 = "John";
 
+//contronto dei suddetti valori
+console.log (name1 == name2); //qui chiediamo se sono uguali, risultato false(non sono uguali)
+console.log (name1 != name2); //qui chiediamo se sono diversi, risultato true(sono diversi)
 
+{ //modichiamo il valore di name1 per farsì che sia identico a name2
+  name1 = "John";
+  console.log (name1 == name2); //qui chiediamo se sono uguali, risultato true(sono uguali, dopo la modifica)
+} 
+//adesso (name1 == name2) sarà assegnato come true, visto la modifica effettuata
