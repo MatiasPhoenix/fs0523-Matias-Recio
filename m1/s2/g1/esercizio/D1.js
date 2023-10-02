@@ -26,9 +26,11 @@ let numero2 = 658;
 let numero3 = 127.55;
 console.log (numero1,"/", numero2, "/", numero3); //prova su console, il simbolo "/" aggiunto per separare visivamente i numeri 
 /*Booleano: utilizzato per dichiarere vero(true) o falso(false) a scopo di controllo o presa di decisioni
-es: 1 è un numero? il Booleano dirà di sì(true), nel caso sia stato programmato così
+es: 10 è minore di 8? il booleano ci dirà che non è così, quindi false
 es di scrittura: */
-let acceso = false; //in questo caso stiamo dicendo che di default il nostro ipotetico elemento è spento, giacché il booleano è false sullo stato di acceso
+console.log (10 < 8); //10 minore di 8? false
+console.log (10 != 11); //10 e 11 sono diversi? true
+console.log (99 == 99); //99 e 99 sono uguali? true
 
 
 
