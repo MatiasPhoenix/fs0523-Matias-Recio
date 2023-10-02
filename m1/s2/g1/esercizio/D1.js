@@ -67,11 +67,12 @@ const MIO_NOME = {
  nome : "Matias",
  cognome : "Recio"
 }
+console.log (MIO_NOME) //qui mostra nome e cognome appena assegnate
 
-//qui modifichiamo il nome dentro MIO_NOME, basterà far diventare un commento questo elemento per farsì che la console mostri nome e cognomi originali
-MIO_NOME.nome = "Recio";
 
-console.log (MIO_NOME);
+{MIO_NOME.nome = "Pippo";
+
+console.log (MIO_NOME);}//qui mostra nome e cognome, con la modifica appena effettuata
 
 
 /* ESERCIZIO 6
