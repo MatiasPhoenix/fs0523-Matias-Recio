@@ -97,8 +97,7 @@ let name2 = "John";
 console.log (name1 == name2); //qui chiediamo se sono uguali, risultato false(non sono uguali)
 console.log (name1 != name2); //qui chiediamo se sono diversi, risultato true(sono diversi)
 
-{ //modichiamo il valore di name1 per farsì che sia identico a name2
-  name1 = "John";
-  console.log (name1 == name2); //qui chiediamo se sono uguali, risultato true(sono uguali, dopo la modifica)
-} 
-//adesso (name1 == name2) sarà assegnato come true, visto la modifica effettuata
+
+console.log("i nomi sono uguali, true or false?")  
+console.log (name1.toLowerCase() == name2.toLowerCase());
+ 
