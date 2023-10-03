@@ -117,9 +117,9 @@ console.log(numeri);
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 
-let prova = 'testo'
+let prova = 'prova'
 
-if (typeof prova === 'numbero') {
+if (typeof prova === 'numero') {
   console.log("è un numero")
 } else {
   console.log("non è un numero")
@@ -129,16 +129,23 @@ if (typeof prova === 'numbero') {
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
-//CONTROLLARE
-//CONTROLLARE
-//CONTROLLARE
-//CONTROLLARE
-
+function IsNotUneven(number)
+{
+if (isNaN(number) == false)
+{
+return (number %2 == 1 ? true : false);
+}
+else
+{
+return null;
+}
+}
+console.log(IsNotUneven(10));
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.*/
  
-  /* let val = 7
+ let val = 7
   if (val < 10) {
       console.log("Meno di 10");
     } else if (val < 5) {
@@ -146,7 +153,7 @@ if (typeof prova === 'numbero') {
     } else (val >= 10);{
       console.log("Uguale a 10 o maggiore");
     }
-    */
+    
 //CONTROLLARE
 //CONTROLLARE
 //CONTROLLARE
@@ -176,6 +183,7 @@ console.log(me);
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
+console.log(me);
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
