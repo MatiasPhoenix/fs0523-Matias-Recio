@@ -67,13 +67,13 @@ if (numero1 === 8 || numero2 === 8 || numero1 + numero2 === 8 || numero1 - numer
   C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
-let totalShoppingCart = 60; //esempio
+let totalShoppingCart = 20; //esempio
 let costoSpedizione = 10;
 let totale = totalShoppingCart
 
 
 if (totalShoppingCart < 50) {
-  totalShoppingCart += costoSpedizione;
+  totale += costoSpedizione;
  } 
  console.log("Congratulazioni! hai diritto alla spedizione gratuita! Il costo totale è di " +totale);
 
@@ -83,18 +83,14 @@ if (totalShoppingCart < 50) {
 */
 
 
-/*let a = 100; // totale in euro
-let b = 20; // sconto in euro
-let sconto = calcolaPerc(a,b);
-
-function calcolaPerc(tot,num) {
-  return ((num/tot) * 100).toFixed(0);
+let totalShoppingCart2 = totalShoppingCart;
+totalShoppingCart2 = totalShoppingCart2 *0.8
+let totaleDaPagare = totalShoppingCart2
+if (totalShoppingCart2 < 50){
+  totaleDaPagare += costoSpedizione
 }
-console.log(totale-sconto);*/
-//CONTROLLARE
-//CONTROLLARE
-//CONTROLLARE
-//CONTROLLARE
+
+console.log("Totale da pagare " +totaleDaPagare);
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -129,35 +125,26 @@ if (typeof prova === 'numero') {
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
-function IsNotUneven(number)
-{
-if (isNaN(number) == false)
-{
-return (number %2 == 1 ? true : false);
+let pariDispari = 32
+
+if (pariDispari % 2 === 0) {
+  console.log("numero pari")
+} else {
+  console.log("numero dispari")
 }
-else
-{
-return null;
-}
-}
-console.log(IsNotUneven(10));
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.*/
  
  let val = 7
-  if (val < 10) {
+  if (val < 5) {
       console.log("Meno di 10");
     } else if (val < 5) {
       console.log("Meno di 5");
-    } else (val >= 10);{
+    } else {
       console.log("Uguale a 10 o maggiore");
     }
     
-//CONTROLLARE
-//CONTROLLARE
-//CONTROLLARE
-//CONTROLLARE
 
 
 /* ESERCIZIO 11
