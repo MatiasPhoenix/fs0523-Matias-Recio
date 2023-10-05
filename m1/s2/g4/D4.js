@@ -104,11 +104,10 @@ check3and7(5)
 */
 let string = "EPICODE"
 //function reverseString (){
-    let parolaReverse = [];
+    
     let lista = string.split("")
-    parolaReverse.push(lista)
-    let reversedEpi = parolaReverse.reverse();
-console.log(reversedEpi);
+    let reversedString = string.split("").reverse().join("");
+console.log(reversedString);
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
