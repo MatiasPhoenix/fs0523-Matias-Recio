@@ -172,11 +172,11 @@ console.log(eyeColor);
 
 let crewMass;
 
-for (let massEffect = 0; massEffect < starWarsCharacters.length; massEffect++){
+/*for (let massEffect = 0; massEffect < starWarsCharacters.length; massEffect++){
   let starWarsCharacter = starWarsCharacters[massEffect];
   //let charactersName = starWarsCharacter.name
   while 
-}
+}*/
   
 
 console.log(starWarsCharacter.mass)
