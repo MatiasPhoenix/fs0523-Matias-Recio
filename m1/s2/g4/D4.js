@@ -1,9 +1,9 @@
 /* ESERCIZIO 1
  Scrivi una funzione di nome "area", che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato..
 */
- /*function area (l1, l2){
-    
- }*/
+ function area (l1, l2){
+  return l1 * l2;   
+ }
 
 
 /* ESERCIZIO 2
@@ -43,7 +43,7 @@ function crazyDiff (a){
         return (risultato);
     }   
 }
-crazyDiff()
+console.log(crazyDiff(19));
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
@@ -81,7 +81,7 @@ function epify (f){
     
 
     
-} epify("EPICODE");*/
+} epify("EPICODE");
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo

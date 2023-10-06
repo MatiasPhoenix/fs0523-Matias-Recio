@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let robeVarie = ["mouse", "caleidoscopio", "ruota", "penna", "anello", "scrivania", "monitor", "bicicletta"]
+
+        robeVarie.sort()
+        console.log(robeVarie);
+
+
+
+        let numeriPazzi = [23,56,11,6,98,15,258,1,7]
+
+        numeriPazzi.sort(function(a,b){
+            return a-b;
+        });
+        console.log(numeriPazzi)
+
+        {
+        let nomi = "matias, Saitam, Tirivm, mortheis, Anadria, inventisto, rodjan, folkvag"
+            
+            console.log(nomi.split(" "));
+
+        function ordinare (...nomi){
+            let nuoviNomi = [];
+            for (let i = 0; i < nomi; i++ ){
+                nuoviNomi.push(nomi().charAt(i).toApperCase())
+            }
+        }
+        ordinare("matias", "Saitam", "Tirivm", "mortheis", "Anadria", "inventisto", "rodjan", "folkvag")
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
