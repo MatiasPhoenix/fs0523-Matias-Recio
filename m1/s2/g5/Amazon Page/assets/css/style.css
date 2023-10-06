@@ -6,6 +6,7 @@
 /*<!-- MULTI ARTICLE -->*/
 /*<!-- DEDICATED ARTICLES A -->*/
 /*<!-- DEDICATED ARTICLES B -->*/
+/*<!-- FOOTER -->*/
 
 
 /*colors*/
@@ -22,6 +23,10 @@ h1 {
     font-size: 2.1rem;
     font-weight: bold;
     padding-top: 25px;
+}
+h3{
+    color: black;
+    font-size: 1.3;
 }
 a {
     text-decoration: none;
@@ -96,6 +101,10 @@ main>div>img {
 
 .multi-article{
     display: inline-block;
+    background-color: white;
+    display: flex;
+    
+    border: 20px;
     
 }
 
@@ -113,10 +122,27 @@ article>div>img {
 
 /*<!-- DEDICATED ARTICLES A -->*/
 
-
+.link-articles {
+    text-align: center;
+}
 
 
 /*<!-- DEDICATED ARTICLES B -->*/
 
 
 
+/*<!-- FOOTER -->*/
+.footers {
+    background-color: var(--coloreHeader2);
+    text-align: center;
+    padding: 20px;
+}
+footer {
+    text-align: center;
+    background-color: var(--coloreHeader1);
+}
+footer>img {
+    text-align: center;
+    width: 180px;
+    padding: 80px;
+}
