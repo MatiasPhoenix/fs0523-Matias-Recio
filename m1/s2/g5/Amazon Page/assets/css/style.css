@@ -1,1 +1,122 @@
 /* Your styles here */
+/*<!-- HEADER -->*/
+/*<!-- MAIN -->*/
+/*<!-- BAR UNDER HEADER -->*/
+/*<!-- HOLIDAY PROMOTION -->*/
+/*<!-- MULTI ARTICLE -->*/
+/*<!-- DEDICATED ARTICLES A -->*/
+/*<!-- DEDICATED ARTICLES B -->*/
+
+
+/*colors*/
+:root {
+   --coloreHeader1: #222f3f;
+   --coloreHeader2: #364759; 
+   --coloreBarOrange: #f66502;
+   --backgroundPage: #e9edee;
+   font-family: Arial, Helvetica, sans-serif;
+   
+}
+h1 {
+    color: white;
+    font-size: 2.1rem;
+    font-weight: bold;
+    padding-top: 25px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.block {
+    display: inline-block;
+    padding: 10px;    
+}
+
+.background-page {
+    background-color: var(--backgroundPage);
+
+}
+
+
+/*<!-- HEADER -->*/
+
+.header {
+background-color: var(--coloreHeader1);
+text-align: left;
+}
+header>div>img {
+    width: 80px;
+    padding: 10px;
+}
+
+#link-header {
+    background-color: var(--coloreHeader2);
+    width: auto;
+}
+
+
+/*<!-- MAIN -->*/
+main {
+    margin: 35px 20px;
+}
+main>div>img {
+    width: 100%;
+}
+
+
+
+/*<!-- BAR UNDER HEADER -->*/
+.orangeBar {
+    padding: 10px 20px;
+    margin:  15px 0px;
+    text-align: center;
+    background-color: var(--coloreBarOrange);
+}
+
+
+
+/*<!-- HOLIDAY PROMOTION -->*/
+
+.holiday {
+    background-image: url(../images/bg-image.png);
+    background-repeat: repeat;
+    text-align: center;
+    padding: 50px;
+
+}
+.holiday>p {
+    color: white;
+    font-weight: bold;
+    padding: 20px;    
+
+}
+
+
+/*<!-- MULTI ARTICLE -->*/
+
+.multi-article{
+    display: inline-block;
+    
+}
+
+article>div>img {
+    text-align: center;
+    width: 300px; 
+    height: 350px;
+    padding: 15px 15px;
+    border-radius: 50px 50px 50px 50px;
+}
+    
+.articoli {
+    margin: 35px 0px;
+}
+
+/*<!-- DEDICATED ARTICLES A -->*/
+
+
+
+
+/*<!-- DEDICATED ARTICLES B -->*/
+
+
+

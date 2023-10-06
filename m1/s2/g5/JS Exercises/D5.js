@@ -104,11 +104,11 @@ for (let i = 0; i < cars.length; i++) {
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
 const justTrims = [];
-// for (let i = 0; i < cars.length; i++) {
-//   let newTrims = cars[i].trims.shift();
-//     justTrims.push(newTrims);
-//   console.log(justTrims);
- // }
+for (let i = 0; i < cars.length; i++) {
+  
+    justTrims.push(cars[i].trims[0]);
+  
+ } //console.log(justTrims);
 
 
 
