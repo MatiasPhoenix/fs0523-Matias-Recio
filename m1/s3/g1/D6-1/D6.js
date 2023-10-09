@@ -259,10 +259,10 @@ const movies = [
 //   let annoFilm = 
 //   movies.forEach(n =>  )
 
-// }
+// } console.log();
 
 
-console.log();
+
 
 // function ricerca(){
 
@@ -308,16 +308,13 @@ function uscitaFilm(){
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 
-function uscitaFilm(){
-  
-  let uscite = movies.filter(film => film.Year >= 2000 && film.Year <= 3000);
-  return uscite
 
-}//console.log(uscitaFilm());
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
+
+
 
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
