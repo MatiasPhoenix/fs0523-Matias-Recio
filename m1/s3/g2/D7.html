@@ -173,8 +173,8 @@
       */
 
       const paintItGreen = function () {
-        let colorChang = document.querySelectorAll("#firstList, #secondList"); 
-        colorChang.forEach(Chang => Chang.style.backgroundColor = 'green');
+        let colorChange = document.querySelectorAll("#firstList, #secondList"); 
+        colorChange.forEach(change => change.style.backgroundColor = 'green');
         
       }
       paintItGreen();
@@ -187,8 +187,8 @@
         let title = document.getElementsByTagName('h1')[0];
         title.addEventListener('click',function(){
           let text = title.innerText; 
-    text = text.slice(0, -1); 
-    title.innerText = text;
+          text = text.slice(0, -1); 
+          title.innerText = text;
             })
 
       }
@@ -198,14 +198,23 @@
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
       */
 
-      const revealFooterLink = function () {}
+      const revealFooterLink = function () {
+        let foot = document.getElementsByTagName('footer')[0];
+        foot.addEventListener('click',function(){
+          window.alert("https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents");
+         
+            })
+      }
+      revealFooterLink();
 
       /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
     */
 
-      const generateTable = function () {}
+      const generateTable = function () {
+        
+      }
 
       /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
