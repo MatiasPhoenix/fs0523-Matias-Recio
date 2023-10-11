@@ -1,0 +1,76 @@
+
+/*<!-- HEADER -->*/
+
+/*<!-- MAIN -->*/
+
+/*<!-- ASIDE -->*/
+
+/*<!-- FOOTER -->*/
+
+
+
+
+
+
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Young Serif', serif;
+    font-size: 2rem;
+    color: black;
+    background-image: url(../assets/images/background.jpeg);
+    background-position-y: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+li {
+    list-style-type: none; 
+    
+}
+
+.del {
+    text-decoration: line-through;
+}
+
+/*<!-- HEADER -->*/
+
+header {
+    background-color: rgb(44, 29, 10);
+    width: 900px; 
+    height: 100px;
+    margin: 0 auto;
+}
+
+/*<!-- MAIN -->*/
+
+main {
+    background-image: url(../assets/images/pergamena.png);
+    text-align: center;
+    padding-top: 300px;
+    width: 800px; 
+    height: 800px;
+    margin: 0 auto;
+}
+
+
+
+
+
+/*<!-- ASIDE -->*/
+
+aside {
+    background-color: rgb(44, 29, 10);
+    text-align: center;
+    width: 900px; 
+    height: 100px;
+    margin: 0 auto;
+}
+
+
+#compilation {
+    padding-top: 20px;
+    
+}
+
+
+/*<!-- FOOTER -->*/
