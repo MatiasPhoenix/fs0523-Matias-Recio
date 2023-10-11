@@ -22,6 +22,7 @@
     background-position-y: bottom;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 li {
     list-style-type: none; 
@@ -35,10 +36,11 @@ li {
 /*<!-- HEADER -->*/
 
 header {
-    background-color: rgb(44, 29, 10);
+    
+    text-align: center;
     width: 900px; 
-    height: 100px;
     margin: 0 auto;
+    padding-top: 50px;
 }
 
 /*<!-- MAIN -->*/
@@ -50,27 +52,30 @@ main {
     width: 800px; 
     height: 800px;
     margin: 0 auto;
+    line-height: 1.5;
 }
 
-
-
+.help {
+    color: white;
+}
 
 
 /*<!-- ASIDE -->*/
 
 aside {
-    background-color: rgb(44, 29, 10);
+    
     text-align: center;
     width: 900px; 
-    height: 100px;
     margin: 0 auto;
 }
 
 
-#compilation {
-    padding-top: 20px;
-    
-}
-
 
 /*<!-- FOOTER -->*/
+footer {
+    color: white;
+    font-size: 0.6rem;
+    padding: 15px;
+    background-color: black;
+    line-height: 1.5;
+}
