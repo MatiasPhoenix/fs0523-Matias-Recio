@@ -1,0 +1,76 @@
+
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Young Serif', serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 1.5;
+
+}
+
+
+
+
+
+/*<!-- HEADER -->*/
+
+
+
+
+
+/*<!-- MAIN -->*/
+
+#tombola {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 650px;
+
+}
+
+.numero {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(129, 112, 112);
+    margin: 3px;
+    text-align: center;
+    
+}
+
+.numeroUscito {
+
+    background-color: rgb(165, 53, 53);
+}
+
+#button-line {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 650px;
+    
+}
+
+#start-button {
+    color: white;
+    background-color: black;
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+    
+}
+#current-number {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin: 10px;
+    border: 3px solid;
+    text-align: center;
+}
+
+
+/* .blocco {
+    width: 100px;
+    margin: 1px;
+} */
+
+
+/*<!-- FOOTER -->*/
