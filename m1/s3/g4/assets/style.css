@@ -9,7 +9,13 @@
 
 }
 
+h1 {
+    padding: 35px;
+    font-size: 1.2rem;
+    max-width: 600px;
+    text-align: left;
 
+}
 
 
 
@@ -20,6 +26,7 @@
 
 
 /*<!-- MAIN -->*/
+
 
 #tombola {
     display: flex;
@@ -37,10 +44,6 @@
     
 }
 
-.numeroUscito {
-
-    background-color: rgb(165, 53, 53);
-}
 
 #button-line {
     display: flex;
