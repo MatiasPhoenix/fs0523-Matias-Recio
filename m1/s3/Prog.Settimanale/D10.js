@@ -400,6 +400,13 @@ function sumAllTheYears(array){
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
+function removeIndex(index) {
+  if (index >= 0 && index < movies.length) {
+    movies.splice(index, 1);
+  }
+  return movies;
+}
+
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
@@ -421,6 +428,15 @@ function searchTag(){
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+
+function newText() {
+  let td = document.querySelectorAll("td");
+
+  for (let i = 0; i < td.length; i++) {
+    let text = td[i].textContent;
+    console.log(text);
+  }
+}
 
 
 /* ESERCIZIO 23
@@ -480,11 +496,7 @@ function classPlus (){
 
 */
 
-function halfTree(){
-  let t = "*";
-  
 
-}
 
 
 
