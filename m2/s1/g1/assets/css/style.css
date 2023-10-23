@@ -188,13 +188,20 @@ footer a {
 .container {
     margin: 0 auto;
 }
-
-@media screen and (min-width: 320px) {
-  nav>ul>li {
+/*****schermi piccoli*****/
+@media screen and (min-width: 320px) and (max-width: 577px) {
+  
+    nav>ul>li {
     display: inline;
     padding-left: 10px;
    }
+
+   table {
+    
+   }
 }
+
+/******schermi medi*****/
 @media screen and (min-width: 577px) and (max-width: 768px){
     header>nav {
         display: inline-block;
