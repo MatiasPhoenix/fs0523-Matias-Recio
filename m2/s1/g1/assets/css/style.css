@@ -142,6 +142,10 @@ tbody tr:last-of-type {
 }
 
 /* FORM */
+.novità{
+    background-color: #4444449d;
+}
+
 input {
     padding: 5px;
     border: 0;
@@ -227,10 +231,30 @@ footer a {
     }
 }
 
+/******schermi grandi*****/
 @media screen and (min-width: 768px){
 
-.table{
+/* .table{
    
+} */
+header {
+    
+    
 }
 
+.vid-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    
+    border-radius: 10px 10px 10px 10px; 
+}
+
+aside div{
+    display: inline-block;
+    width: calc(100% / 3 - 0.4rem);
+}
 }
