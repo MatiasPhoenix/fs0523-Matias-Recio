@@ -1,7 +1,7 @@
 /* IMPOSTAZIONI GENERALI */
 
 body {
-  font-family: Poppins, "Helvetica Neue", sans-serif;
+  font-family: Poppins, sans-serif;
   line-height: 1.6;
   padding: 15px;
   background-image: url("../img/sfondo.png");
@@ -10,6 +10,10 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+.relative {
+  position: relative;
 }
 
 hr {
@@ -97,6 +101,20 @@ main {
   }
 }
 
+.imm-html {
+  float: left;
+  
+}
+
+.underline {
+  height: 90px;
+  display: inline-block;
+  background-image: url(../img/underline.svg);
+  background-repeat: no-repeat;
+  background-position-y: 50px;
+  
+}
+
 section {
   background-color: #e3e3e3;
   padding: 1.5em 1em;
@@ -112,6 +130,15 @@ section h2 {
   font-weight: bold;
   background-color: #a3a3a3;
   padding: 0px 1em;
+}
+
+.tag-aside {
+  position: absolute;
+  right: 10px;
+  top: -5px;
+  color: rgba(106, 104, 104, 0.195);
+  font-size: 60px;
+
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -141,12 +168,16 @@ h1 + p {
   p,
   ul,
   ol {
-    font-size: 1.4rem;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
   }
 
   h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-size: 1rem;
+    
   }
 }
 
@@ -163,7 +194,7 @@ h1 + p {
 
   h2 {
     font-size: 1.4rem;
-    font-weight: 700;
+    ;
   }
 }
 
@@ -231,9 +262,9 @@ table {
   margin-bottom: 2em;
 }
 @media screen and (min-width: 500px) {
-  table {
+  /* table {
     margin: 0 auto 2em;
-  }
+  } */
 }
 @media screen and (min-width: 700px) {
   table {
@@ -326,6 +357,15 @@ aside div p:last-child {
   text-align: right;
 }
 
+.fly-text {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  box-shadow: 0px 0.5px 0.5px #000;
+  background-color: #A3A4A4;
+  
+}
+
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
@@ -340,6 +380,7 @@ footer {
 @media screen and (min-width: 800px) {
   footer {
     padding: 1em 12em;
+    
   }
 }
 
