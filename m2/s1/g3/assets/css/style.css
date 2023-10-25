@@ -13,6 +13,13 @@ button{
     background-color: #fae094;
     border-style: none;
 }
+li{
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #732104;
+}
 
 
 
@@ -67,3 +74,30 @@ button{
 /***********************
 2-Navigation bar
 ***********************/
+#navigationPage{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+#cotainerLink{
+    background-color: #fef7e2;
+    height: 10vh;
+    align-items: center;
+}
+
+.imm {
+    height: 30px;
+    width: 30px;
+}
+
+.buttonPage{
+    padding: 8px;
+    border-radius: 30px;
+    width: 130px;
+    height: 30px;
+    background-color: #fae094;
+    text-align: center;
+    
+}
