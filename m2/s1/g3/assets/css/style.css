@@ -74,18 +74,20 @@ a {
 /***********************
 2-Navigation bar
 ***********************/
-#navigationPage{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-}
-
 #cotainerLink{
     background-color: #fef7e2;
     height: 10vh;
-    align-items: center;
+    
 }
+
+#navigationPage{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 
 .imm {
     height: 30px;
@@ -93,11 +95,20 @@ a {
 }
 
 .buttonPage{
-    padding: 8px;
+    padding-top: 10px;
     border-radius: 30px;
-    width: 130px;
-    height: 30px;
+    width: 170px;
+    height: 40px;
     background-color: #fae094;
     text-align: center;
+
     
+}
+
+.buttonPageCenter{
+    
+    text-align: center;
+    text-transform: uppercase;
+    padding: 25px 10px;
+
 }
