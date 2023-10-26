@@ -4,4 +4,29 @@
     --colorPViolet: #c5c5f0;
 }
 
-#
+#bacheca {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: grey;
+    justify-content: space-around;
+}
+
+.gPostit {
+    margin: 15px;
+    width: 250px;
+    height: 200px;
+    text-align: center;
+    align-items: center;
+}
+
+.post-it1, .post-it5, .post-it7 {
+    background-color: var(--colorPYellow);
+    transform: rotateX('angle') ;
+}
+.post-it2, .post-it4, .post-it8 {
+    background-color: var(--colorPGreen);    
+}
+.post-it3, .post-it6{
+    background-color: var(--colorPViolet);
+    
+}
