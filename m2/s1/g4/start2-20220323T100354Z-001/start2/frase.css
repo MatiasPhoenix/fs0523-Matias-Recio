@@ -38,14 +38,19 @@
     width: 100%;
     opacity: 0;
     animation: changeWord 15s linear infinite;
+    animation-timing-function: linear;
   }
 
   @keyframes changeWord {
     0%, 30% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    35%, 45% {
       opacity: 1;
       transform: translateY(0);
     }
-    35%, 100% {
+    65%, 100% {
       opacity: 0;
       transform: translateY(20px);
     }
