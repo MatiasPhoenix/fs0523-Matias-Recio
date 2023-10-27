@@ -136,20 +136,28 @@ header{
 
 
 /********** Links Aside section **********/
+aside {
+    margin-bottom: 35px;
+}
+.discover{
+    font-weight: bold;
+}
+aside > a {
+    color: rgb(13, 122, 13);
+}
 .newArticles{
     display: flex;
     padding-top: 56px;
 }
 
-.articleScroll {
+.articleScroll 
     
-    
-}
+
 .articoloImmagine{
     display: flex;
 }
 .articoloImmagine > div > img {
-    max-width: ;
+    
     margin-left: 40px;
 }
 .lateralBar {
@@ -163,6 +171,8 @@ header{
     margin: 20px 0px;
 }
 
+
+
 .button-aside {
     margin: 10px;
     
@@ -174,4 +184,15 @@ header{
     color: rgb(36, 36, 36);
     font-size: 14px;
     line-height: 20px;
+}
+
+footer{
+    width: 500px;
+    border-top: 1px solid rgb(218, 218, 218);
+    padding-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer > div {
+    padding: 15px;
 }
