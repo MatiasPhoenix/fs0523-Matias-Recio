@@ -25,7 +25,9 @@ a {
 }
 /********** Header section **********/
 header{
-    
+    position: sticky;
+    top: 0;
+    z-index: 10;
     border-bottom: 1px solid rgb(36, 36, 36);
     height: 75px;
     display: flex;
@@ -33,6 +35,7 @@ header{
     flex-direction: row;
     justify-content: space-around;
     background-color: var(--colorBG);
+    transition: background-color 0.5s;
 }
 .links-page {
     display: flex;
@@ -135,15 +138,35 @@ header{
 /********** Links Aside section **********/
 .newArticles{
     display: flex;
+    padding-top: 56px;
 }
 
-.lateralBar
+.articleScroll {
+    
+    
+}
+.articoloImmagine{
+    display: flex;
+}
+.articoloImmagine > div > img {
+    max-width: ;
+    margin-left: 40px;
+}
+.lateralBar {
+ padding-left: 100px;
+}
 
 .all-aside {
+    width: 500px;
     display: flex;
     flex-wrap: wrap;
+    margin: 20px 0px;
 }
 
+.button-aside {
+    margin: 10px;
+    
+}
 .button-aside > a {
     background-color: rgb(242, 242, 242);
     border-radius: 100px;
