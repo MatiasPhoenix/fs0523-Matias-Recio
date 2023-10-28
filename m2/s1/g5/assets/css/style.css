@@ -181,11 +181,11 @@ header {
 
 /********** Main section **********/
 
-.trendArrow{
+/* .trendArrow{
   display: flex;
   gap: 0px;
   padding-left: -50px;
-}
+} */
 .trending{
   padding-left: 180px;
 }
