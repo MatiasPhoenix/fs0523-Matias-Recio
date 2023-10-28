@@ -1,3 +1,4 @@
+
 const header = document.querySelector("header");
 let isScrolled = false; 
 let originalBackgroundColor = window.getComputedStyle(header).backgroundColor;
