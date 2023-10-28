@@ -51,6 +51,7 @@ header {
   border-radius: 99em;
   border-width: 1px;
   border-style: solid;
+  transition: background-color 0.5s;
 }
 
 /********** Hero section **********/
@@ -70,7 +71,7 @@ header {
   flex-direction: column;
   padding-top: 93px;
   padding-bottom: 92px;
-  
+
 }
 .stayC {
   margin-bottom: 35px;
@@ -81,6 +82,7 @@ header {
   line-height: 95px;
 }
 .text-stayC {
+  width: 450px;
   margin-bottom: 50px;
   font-size: 24px;
   line-height: 24px;
@@ -97,7 +99,7 @@ header {
   background: rgb(25, 25, 25);
   fill: rgb(255, 255, 255);
   color: rgb(255, 255, 255);
-  
+
 }
 .mainContainer {
   width: 100%;
@@ -113,7 +115,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   padding: 20px;
 }
 .link-article {
@@ -135,19 +137,19 @@ header {
   font-size: 32px;
   line-height: 38px;
   font-weight: bold;
-  
+
 }
 .names{
   font-size: 13px;
   line-height: 16px;
   color: #242424;
   padding-left: 5px;
-  
+
 }
 .flex1{
   display: flex;
   flex-direction: column;
-  
+
 }
 .flex2{
   display: flex;
@@ -179,24 +181,32 @@ header {
 
 /********** Main section **********/
 
+.trendArrow{
+  display: flex;
+  gap: 0px;
+  padding-left: -50px;
+}
+.trending{
+  padding-left: 180px;
+}
 .articoloNuovo {
   display: flex;
   justify-content: space-around;
   gap: 30px;
   padding-bottom: 60px;
-  
+
 }
 .col-1 {
   width: 450px;
   flex-direction: column;
   align-self: center;
-  
+
 }
 .numSpan {
   width: 40px;
   margin-right: 16px;
   color: rgb(242, 242, 242);
-  
+
 }
 
 .thumbImage {
@@ -224,7 +234,7 @@ header {
 /********** Links Aside section **********/
 aside {
   margin-bottom: 35px;
-  position: sticky; 
+  position: sticky;
 }
 .discover {
   font-weight: bold;
@@ -233,7 +243,7 @@ aside {
 
 aside > a {
   color: rgb(13, 122, 13);
-  
+
 }
 .granContainer{
   width: 100%;
@@ -246,7 +256,7 @@ aside > a {
   justify-content: space-around;
   padding-top: 56px;
   gap: 40px;
-  
+
 }
 
 .articleScroll .articoloImmagine {
@@ -255,7 +265,7 @@ aside > a {
 }
 .articoloImmagine {
   width: 600px;
-  
+
 }
 /* .articoloImmagine > div > img {
   margin-left: 40px;
