@@ -7,7 +7,33 @@
 @import 'fonts';
 
 
-.headerBox {
-    max-width: 50px;
+////////////////////////////////////// Header
+.flexClass{
+    display: flex;
+
+}
+.headerClass {
+    height: 60px;
+    border-bottom: 1.5px solid black;
+    justify-content: space-between;
+    background-color: $bgColor;}
+
+.headerLinks {
+   align-items: center;
+   padding-right: 15px;
+   li{
+    padding: 0 5px;
+   }
 }
 
+.headerBox {
+    max-width: 50px;
+    
+}
+
+////////////////////////////////////// Hero
+
+.hero {
+    height: 100px;
+    background-color: $bgColorHero;
+}
