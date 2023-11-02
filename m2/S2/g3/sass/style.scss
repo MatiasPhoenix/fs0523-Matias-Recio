@@ -1,4 +1,7 @@
-h1 {
-    font-size: 2rem;
-}
-
+@import 'animations';
+@import 'buttons';
+@import 'colors';
+@import 'mixins';
+@import 'reset';
+@import 'spaces';
+@import 'fonts';
