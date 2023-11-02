@@ -7,6 +7,7 @@
 @import 'fonts';
 
 
+
 ////////////////////////////////////// Header
 .flexClass{
     display: flex;
@@ -34,6 +35,23 @@
 ////////////////////////////////////// Hero
 
 .hero {
-    height: 100px;
+    height: 250px;
     background-color: $bgColorHero;
+}
+.buttonsOrder {
+    display: flex;
+    flex-wrap: w;
+    justify-content: center;
+    align-items: center;
+}
+////////////////////////////////////// Article
+
+.articleBox {
+    // border: 20px;
+    padding-top: 50px;
+    
+}
+
+.immageBox {
+    padding: 5px;
 }
