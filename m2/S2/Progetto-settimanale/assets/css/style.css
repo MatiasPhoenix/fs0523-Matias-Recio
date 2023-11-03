@@ -1,0 +1,12 @@
+/*********************** Header *******************************/
+.containerProfile{
+    background-color: black;
+}
+.headerProfile > img {
+    max-width: 150px;
+    
+}
+<!-- /*********************** Main *******************************/ -->
+.mainProfile{
+    height: 100vh;
+}
