@@ -6,19 +6,40 @@ h1, h2, h3, h4, h5, h6, p, button {
 }
 h2 {
     font-size: 2.2rem;
-}.flexWrap{
+}
+.textH2Profile {
+    border-bottom: 1.5px solid grey;
+}
+.flexWrap{
     flex-wrap: nowrap;
 }
 .borderSolid{
-    padding-bottom: 15px;
+    padding-top: 30PX;
+    padding-bottom: 30px;
     border-bottom: 1.5px solid grey;
+}
+.borderSolidButtons{
+    padding-top: 30PX;
+    border-top: 1.5px solid grey;
 }
 .flexExtra{
     display: flex;
+    align-items: baseline;
+}
+.extra{
+    padding-left: 15px;
+    
+}
+.blackButtons {
+    background-color: #141414;
+    color: grey;
+}
+.buttonProfile{
+    justify-content: space-between;
 }
 /*********************** Header *******************************/
 .containerProfile{
-    background-color: black;
+    background-color: #141414;
 }
 header{
     margin-bottom: 25px;
