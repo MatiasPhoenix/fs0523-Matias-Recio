@@ -2,24 +2,25 @@
 }
 
 h1, h2, h3, h4, h5, h6, p, button {
-    color: white;
+    color: rgb(177, 177, 177);
 }
 h2 {
     font-size: 2.2rem;
 }
 .textH2Profile {
     border-bottom: 1.5px solid grey;
+    margin-bottom: 20px;
 }
 .flexWrap{
     flex-wrap: nowrap;
 }
 .borderSolid{
-    padding-top: 30PX;
     padding-bottom: 30px;
+    margin-bottom: 25px;
     border-bottom: 1.5px solid grey;
 }
 .borderSolidButtons{
-    padding-top: 30PX;
+    padding-top: 10PX;
     border-top: 1.5px solid grey;
 }
 .flexExtra{
@@ -31,10 +32,27 @@ h2 {
     
 }
 .blackButtons {
+    font-size: 1.3rem;
     background-color: #141414;
     color: grey;
+    border: 1px solid grey;
+    padding: 10px 30px;
+    margin-top: 15px;
+    
 }
-.buttonProfile{
+.maturityButton{
+    background-color: rgba(51,51,51,255);
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 10px;
+}
+.selezionatoreLingua{
+    background-color: black;
+    color: white;
+    padding-right: 15px;
+}
+.spaceB {
     justify-content: space-between;
 }
 /*********************** Header *******************************/
@@ -51,9 +69,9 @@ header{
 /*********************** Main *******************************/
 .mainProfile{
     height: 100vh;
-    max-width: 600px;
+   
 }
 
 .mainProfileImg {
-    max-width: 90px;
+    max-width: 100%;
 }

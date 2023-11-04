@@ -17,9 +17,9 @@
         </header>
         
         <!-- /*********************** Main *******************************/ -->
-        <main class="mainProfile container">
+        <main class="col-12 col-md-6 col-xl-6 mainProfile container">
             <h2 class="textH2Profile">Edit Profile</h2>
-            <div>
+            
 
                 <div class="row flexWrap">
                     <div class="col-4"><img class="mainProfileImg" src="../assets/avatar-logo/avatar.png" alt="avatar"></div>
@@ -27,16 +27,21 @@
                         <div class="pb-3"><input type="text"></div>
                     <div class="borderSolid">
                         <div><p>Language:</p></div>
-                        <button>English</button>
+                        <select class="selezionatoreLingua p-2 ps-3">
+                            <option value="opzione1">English</option>
+                            <option value="opzione2">Español</option>
+                            <option value="opzione3">Italiano</option>
+                          </select>
+                          
                     </div>
                     <div class="borderSolid">
-                        <div><p class="fs-">Maturity Settings:</p></div>
-                        <button>ALL MATURITY RATINGS</button>
-                        <div><p class="fs-">Show titles of all maturity ratings for this profile.</p></div>
+                        <div><p class="">Maturity Settings:</p></div>
+                        <button class="buttonProfile maturityButton">ALL MATURITY RATINGS</button>
+                        <div><p class="">Show titles of all maturity ratings for this profile.</p></div>
                         <button class="buttonProfile blackButtons">EDIT</button>
                     </div>
                         <div>
-                            <div><p class="fs-">Autoplay controls</p></div>
+                            <div><p class="">Autoplay controls</p></div>
                             <div class="flexExtra"><input type="checkbox"><p class="extra">Autoplay next episode in a series on all devices.</p></div>
                             <div class="flexExtra"><input type="checkbox"><p class="extra">Autoplay previews while browsing on all devices</p></div>
                         </div>
@@ -44,12 +49,11 @@
                 
                 </div>
                 <!-- /*********************** Fake footer (buttons) *******************************/ -->
-                <div class="row buttonProfile borderSolidButtons">
-                    <div class="col-3"><button class="blackButtons px-5">SAVE</button></div>
-                    <div class="col-6"><button class="blackButtons px-4">CANCEL</button></div>
-                    <div class="col-12 mt-5"><button class="blackButtons px-5">DELETE PROFILE</button></div>
+                <div class="row col-12 borderSolidButtons ">
+                    <div class="col-6 col-md-6 col-lg-3 d-flex justify-content-start"><button class="blackButtons">SAVE</button></div>
+                    <div class="col-6 col-md-6 col-lg-3"><button class="blackButtons">CANCEL</button></div>
+                    <div class="col-12 col-md-12 col-lg-6 d-flex justify-content-end"><button class="blackButtons">DELETE PROFILE</button></div>
                 </div>
-            </div>
         </main>
         
         
