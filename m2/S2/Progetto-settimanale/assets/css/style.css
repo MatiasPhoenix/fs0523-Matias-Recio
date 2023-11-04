@@ -55,7 +55,7 @@ h2 {
 .miniTitle{
     font-size: 1.6rem;
 }
-
+/******* Profile Netflix **************** Profile Netflix ***************** Profile Netflix **************/
 /*********************** Header *******************************/
 .containerProfile{
     background-color: #141414;
@@ -101,4 +101,12 @@ header{
     padding: 7px 30px;
     margin-top: 15px;
     
+}
+
+
+/******* Homepage Netflix **************** Homepage Netflix ***************** Homepage Netflix **************/
+/*********************** Header *******************************/
+
+.headerHomeP{
+    background-color: #141414;;
 }
