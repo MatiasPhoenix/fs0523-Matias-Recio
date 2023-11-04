@@ -4,8 +4,12 @@
 h1, h2, h3, h4, h5, h6, p, button {
     color: rgb(177, 177, 177);
 }
+p {
+    font-size: 1.1rem;
+}
 h2 {
-    font-size: 2.2rem;
+    font-size: 3rem;
+    color: white;
 }
 .textH2Profile {
     border-bottom: 1.5px solid grey;
@@ -19,10 +23,7 @@ h2 {
     margin-bottom: 25px;
     border-bottom: 1.5px solid grey;
 }
-.borderSolidButtons{
-    padding-top: 10PX;
-    border-top: 1.5px solid grey;
-}
+
 .flexExtra{
     display: flex;
     align-items: baseline;
@@ -31,30 +32,30 @@ h2 {
     padding-left: 15px;
     
 }
-.blackButtons {
-    font-size: 1.3rem;
-    background-color: #141414;
-    color: grey;
-    border: 1px solid grey;
-    padding: 10px 30px;
-    margin-top: 15px;
-    
-}
+
 .maturityButton{
     background-color: rgba(51,51,51,255);
-    padding: 5px 5px;
+    color: white;
+    padding: 5px 15px;
     border: none;
     border-radius: 5px 5px 5px 5px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 .selezionatoreLingua{
     background-color: black;
     color: white;
-    padding-right: 15px;
+    border-color: white;
+    padding: 5px;
+    padding-right: 70px;
 }
 .spaceB {
     justify-content: space-between;
 }
+.miniTitle{
+    font-size: 1.6rem;
+}
+
 /*********************** Header *******************************/
 .containerProfile{
     background-color: #141414;
@@ -64,6 +65,7 @@ header{
 }
 .headerProfile > img {
     max-width: 150px;
+    color: white;
     
 }
 /*********************** Main *******************************/
@@ -71,7 +73,32 @@ header{
     height: 100vh;
    
 }
+.myMargin{
+    margin-bottom: 5px;
+}
+
+.inputText {
+    background-color: #666666;
+    color: white;
+    width: 80%;
+}
 
 .mainProfileImg {
     max-width: 100%;
+}
+
+/*********************** Fake footer (buttons) *******************************/
+.borderSolidButtons{
+    padding-top: 10PX;
+    border-top: 1.5px solid grey;
+}
+
+.blackButtons {
+    font-size: 1.3rem;
+    background-color: #141414;
+    color: grey;
+    border: 1px solid grey;
+    padding: 7px 30px;
+    margin-top: 15px;
+    
 }
