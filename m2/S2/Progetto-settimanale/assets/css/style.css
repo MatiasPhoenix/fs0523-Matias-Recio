@@ -60,7 +60,7 @@ h2 {
 .containerProfile{
     background-color: #141414;
 }
-header{
+.header{
     margin-bottom: 25px;
 }
 .headerProfile > img {
@@ -109,9 +109,11 @@ header{
 .nav-link {
     color: white;
 }
-.headerHomeP{
+.bodyHomeP{
     background-color: #141414;
     color: white;
+    height: 100vh;
+
 }
 header > nav {
     color: white;
@@ -125,4 +127,24 @@ header > nav {
 .paddingZero {
     padding-left: 10px;
     padding-right: 0px;
+}
+/*********************** MainBar *******************************/
+.borderButton{
+    
+    border: 1px solid white;
+    width: 35px;
+    height: 30px;
+    padding: 6px;
+
+}
+.specialBar{
+    margin: 30px 10px;
+   
+}
+.selezionatoreGenres {
+    background-color: black;
+    color: white;
+    border-color: white;
+    padding: 5px;
+    
 }
