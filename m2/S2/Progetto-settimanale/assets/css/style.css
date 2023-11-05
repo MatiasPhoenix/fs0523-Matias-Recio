@@ -106,7 +106,23 @@ header{
 
 /******* Homepage Netflix **************** Homepage Netflix ***************** Homepage Netflix **************/
 /*********************** Header *******************************/
-
+.nav-link {
+    color: white;
+}
 .headerHomeP{
-    background-color: #141414;;
+    background-color: #141414;
+    color: white;
+}
+header > nav {
+    color: white;
+}
+.logoImg {
+    max-width: 150px;
+}
+.avatarHomeP{
+    max-width: 70%;
+}
+.paddingZero {
+    padding-left: 10px;
+    padding-right: 0px;
 }
