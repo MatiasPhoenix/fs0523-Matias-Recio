@@ -109,11 +109,15 @@ h2 {
 .nav-link {
     color: white;
 }
+.nav-link{
+    margin-right: 15px;
+}
 .bodyHomeP{
     background-color: #141414;
     color: white;
-    height: 100vh;
-
+    height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 header > nav {
     color: white;
@@ -138,7 +142,8 @@ header > nav {
 
 }
 .specialBar{
-    margin: 30px 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
    
 }
 .selezionatoreGenres {
@@ -147,4 +152,18 @@ header > nav {
     border-color: white;
     padding: 5px;
     
+}
+
+/*********************** MainFilm *******************************/
+.immFilm{
+   max-width: 100%;
+}
+/*********************** Footer *******************************/
+
+.footerHome {
+    margin-top: 120px;
+}
+
+.footerLink{
+    color: rgb(92, 90, 90);
 }
