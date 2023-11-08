@@ -5,9 +5,10 @@ fetch('https://striveschool-api.herokuapp.com/books')
     res.forEach(element => {
         let card = document.createElement('div');
         card.className = 'card col-12 col-md-6 col-xl-4';
-        document.querySelector('.container').append(card);
-        card.innerHTML = `<img class="h-75 card-img-top" src="${element.img}" alt="Card image cap">
-        <div class="card-body">
+        document.querySelector('.row').append(card);
+        card.innerHTML = `
+            <img class="h-75 card-img-top" src="${element.img}" alt="Card image cap">
+            <div class="card-body">
             <h5 class="card-title">${element.title}</h5>
             <p class="card-text">${element.price}</p>
             <a href="#" class="btn text-center btn-primary">Add to cart</a>`
