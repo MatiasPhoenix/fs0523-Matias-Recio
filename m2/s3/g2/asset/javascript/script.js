@@ -13,3 +13,22 @@ cancelButton.addEventListener("click", function(){
 if(newName){
     lastName.innerHTML = sessionStorage.getItem("pippo");
 }
+
+
+
+
+let timer;
+setInterval(function(){
+    
+
+    if(timer == 0){
+        timer = 0;   
+        sessionStorage.setItem("timer", timer);
+        document.querySelector(".timer").innerHTML = timer;
+
+    }else (timer != 0){
+        
+        document.querySelector(".timer").innerHTML = timer;
+    }
+    timer++;
+}, 1000)
