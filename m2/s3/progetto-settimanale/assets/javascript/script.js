@@ -47,10 +47,11 @@ function getAndDisplayProducts() {
       //Prodotti piazzati sullo schermo
       products.forEach((product) => {
         const listItem = document.createElement("li")
-        listItem.classList.add("col-3");
+        listItem.classList.add("col-2");
         listItem.classList.add("card");
         listItem.classList.add("mx-3");
-        listItem.classList.add("my-2");
+        listItem.classList.add("my-4");
+        
        
 
         const imgElement = document.createElement("img")
@@ -81,12 +82,27 @@ function getAndDisplayProducts() {
         removeButton.classList.add("btnRemove");
         removeButton.classList.add("btn");
         removeButton.classList.add("btn-danger");
-        textInfo.appendChild(removeButton);
+        // textInfo.appendChild(removeButton);
+
+        //Modifica prodotto
+        const editButton = document.createElement("a");
+        editButton.textContent = "Modifica";
+        editButton.addEventListener("click", () => editProduct(product._id)); 
+        editButton.classList.add("btnEdit");
+        editButton.href = "modificaProdotto.html";
+        editButton.classList.add("btn");
+        editButton.classList.add("btn-primary");
+        textInfo.appendChild(editButton);
       
         listItem.appendChild(imgElement);
         listItem.appendChild(textInfo);
-      
         productList.appendChild(listItem);
+
+        const buttonZone = document.createElement("div");
+        buttonZone.classList.add("card-footer");
+        listItem.appendChild(buttonZone);
+        buttonZone.appendChild(editButton);
+        buttonZone.appendChild(removeButton);
         
       })
     })

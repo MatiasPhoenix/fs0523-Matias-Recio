@@ -56,7 +56,7 @@ function getAndDisplayProducts() {
         const imgElement = document.createElement("img")
         imgElement.src = "assets/images/yourBeer.jpg"
         imgElement.alt = `Immagine di ${product.name}`
-        imgElement.classList.add("product-image")
+        imgElement.classList.add("product-image-home")
         
 
         listItem.appendChild(imgElement)

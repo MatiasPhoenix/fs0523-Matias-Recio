@@ -11,7 +11,7 @@
   <body>
     <header class="row align-items-center">
       <div class="col">
-        <a href="index.html"><img src="assets/images/logo.png" alt="SuperLogo"></a>
+        <a href="index.html"><img class="logo" src="assets/images/logo.png" alt="SuperLogo"></a>
       </div>
       <div class="col d-flex justify-content-end">
         <ul class="menu row">
@@ -22,36 +22,36 @@
       </div>
     </header>
     
-    <div class="hero">
+    <div class="hero specialBorder">
     <div class="container">
 
 
-        <form class="row specialBorder">
-         <h2 class="my-4 text-center whiteFont">-Back Office-</h2>
+        <form class="row">
+         <h2 class="my-4 text-center text-white">-Crea o cancella la tua birra-</h2>
          <div class="addPannel">
 
            <div class="mx-1 my-1">
 
              <form id="productForm">
-             <label for="name" class="whiteFont">Nome del prodotto:</label>
+             <label for="name" class="text-white">Nome del prodotto:</label>
              <input type="text" id="name" name="name" required />
 
-             <label for="price" class="whiteFont">Prezzo:</label>
+             <label for="price" class="text-white">Prezzo:</label>
              <input type="number" id="price" name="price" required />
 
            </div>
            <div class="my-1 row">
                <div>
 
-                 <label for="imageUrl" class="whiteFont">URL dell'immagine:</label>
+                 <label for="imageUrl" class="text-white">URL dell'immagine:</label>
                  <input type="text" id="imageUrl" name="imageUrl" required />
 
-                 <label for="brand" class="whiteFont">Marca:</label>
+                 <label for="brand" class="text-white">Marca:</label>
                  <input type="text" id="brand" name="brand" required />
                </div>
                <div class="row my-3 text-center d-flex justify-content-around">
                  <div class="row col-5">
-                   <label for="description" class="whiteFont">Descrizione:</label>
+                   <label for="description" class="text-white">Descrizione:</label>
                    <textarea id="description" name="description" required></textarea>
                  </div>
                  <div class="d-flex justify-content-center">
@@ -66,9 +66,21 @@
     
 
     </div>
-      <h3 class="text-center my-3 whiteFont">-TOUR DE BEERS-</h3>
+      <h3 class="text-center my-3 text-white">-LIST OF BEERS-</h3>
       <ul id="productList" class="row d-flex justify-content-center"></ul>
     
+      
+        <footer class="py-3">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+          </ul>
+          <p class="text-center text-white">© 2023 Company, Inc</p>
+        </footer>
+      
     <script src="assets/javascript/script.js"></script>
   </body>
 </html>
