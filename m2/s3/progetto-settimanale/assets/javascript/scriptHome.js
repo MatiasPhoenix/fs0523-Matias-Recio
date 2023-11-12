@@ -41,7 +41,7 @@ function getAndDisplayProducts() {
   })
     .then((response) => response.json())
     .then((products) => {
-      const productList = document.getElementById("productList")
+      const productList = document.getElementById("productBeer")
 
       productList.innerHTML = ""
       //Prodotti piazzati sullo schermo
@@ -73,15 +73,6 @@ function getAndDisplayProducts() {
         textInfo.classList.add("card-body")
         listItem.appendChild(textInfo)
         productList.appendChild(listItem)
-
-        //Cancellare prodotto
-        const removeButton = document.createElement("button");
-        removeButton.textContent = "Rimuovi";
-        removeButton.addEventListener("click", () => removeProduct(product._id)); 
-        removeButton.classList.add("btnRemove");
-        removeButton.classList.add("btn");
-        removeButton.classList.add("btn-danger");
-        textInfo.appendChild(removeButton);
       
         listItem.appendChild(imgElement);
         listItem.appendChild(textInfo);
@@ -94,41 +85,5 @@ function getAndDisplayProducts() {
       console.error("Errore durante il recupero dei prodotti:", error)
     })
 }
-//Creazione del prodotto
-function addProduct() {
-  const name = document.getElementById("name").value
-  const price = document.getElementById("price").value
-  const imageUrl = document.getElementById("imageUrl").value
-  const brand = document.getElementById("brand").value
-  const description = document.getElementById("description").value
-
-  const productData = {
-    name: name,
-    price: price,
-    imageUrl: imageUrl,
-    brand: brand,
-    description: description,
-  }
-
-  fetch(apiUrl, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-    body: JSON.stringify(productData),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Prodotto aggiunto :", data)
-      getAndDisplayProducts()
-    })
-    .catch((error) => {
-      console.error("Errore durante l'aggiunta del prodotto:", error)
-    })
-}
-
-
 
 getAndDisplayProducts()
-console.log()

@@ -1,7 +1,16 @@
 :root {
     font-family: 'Open Sans', sans-serif;
 }
-
+a {
+    text-decoration: none;
+}
+body {
+    background-image: url(../images/background-beer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 strong {
     font-weight: bolder;
 }
@@ -37,8 +46,19 @@ li.card{
     text-align: center;
     height: 400px;
 }
-
-.card-body {
+.whiteFont{
+    color: white;
+}
+/* CREA PRODOTTI */
+.hero{
+    background-image: url(../images/festivalBeer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: initial;
+    
+}
+.card-body {    
     flex: 1; 
     display: flex;
     flex-direction: column;
@@ -74,4 +94,25 @@ li.card{
     border-bottom: 2px solid #000;
     margin-bottom: 15px;
     
+  }
+
+  /* HOME PAGE */
+
+  header {
+    height: 120px;
+    background-color: black;
+    
+  }
+  .menuHeader{
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: white;
+  }
+  .menu {
+    margin-right: 25px;
+  }
+
+  header, img{
+    margin-left: 35px;
+    max-height: 170px;
   }

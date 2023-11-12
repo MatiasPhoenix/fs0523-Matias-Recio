@@ -9,49 +9,65 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-  <div class="container">
-    <form class="row specialBorder">
-      <h2 class="my-4 text-center">-Back Office-</h2>
-      <div class="addPannel">
-
-        <div class="mx-1 my-1">
-          
-          <form id="productForm">
-          <label for="name">Nome del prodotto:</label>
-          <input type="text" id="name" name="name" required />
-          
-          <label for="price">Prezzo:</label>
-          <input type="number" id="price" name="price" required />
-              
-        </div>
-        <div class="my-1 row">
-            <div>
-
-              <label for="imageUrl">URL dell'immagine:</label>
-              <input type="text" id="imageUrl" name="imageUrl" required />
-              
-              <label for="brand">Marca:</label>
-              <input type="text" id="brand" name="brand" required />
-            </div>
-            <div class="row my-3 text-center d-flex justify-content-around">
-              <div class="row col-5">
-                <label for="description">Descrizione:</label>
-                <textarea id="description" name="description" required></textarea>
-              </div>
-              <div class="d-flex justify-content-center">
-                <button type="button" class="col-3 btnAdd my-3  btn btn-primary" onclick="addProduct()">Aggiungi Prodotto</button>
-              </div>
-            </div>
-        </div>
-          
+    <header class="row align-items-center">
+      <div class="col">
+        <a href="index.html"><img src="assets/images/logo.png" alt="SuperLogo"></a>
       </div>
-    </form>
+      <div class="col d-flex justify-content-end">
+        <ul class="menu row">
+          <a href="index.html" class="menuHeader col-2 mx-2">Home</a>
+          <a href="creaProdotti.html" class="menuHeader col-6 d-flex justify-content-end">New Birra?</a>
+          <a href="#" class="menuHeader col-2 ">Iscriviti</a>
+        </ul>
+      </div>
+    </header>
     
+    <div class="hero">
+    <div class="container">
+
+
+        <form class="row specialBorder">
+         <h2 class="my-4 text-center whiteFont">-Back Office-</h2>
+         <div class="addPannel">
+
+           <div class="mx-1 my-1">
+
+             <form id="productForm">
+             <label for="name" class="whiteFont">Nome del prodotto:</label>
+             <input type="text" id="name" name="name" required />
+
+             <label for="price" class="whiteFont">Prezzo:</label>
+             <input type="number" id="price" name="price" required />
+
+           </div>
+           <div class="my-1 row">
+               <div>
+
+                 <label for="imageUrl" class="whiteFont">URL dell'immagine:</label>
+                 <input type="text" id="imageUrl" name="imageUrl" required />
+
+                 <label for="brand" class="whiteFont">Marca:</label>
+                 <input type="text" id="brand" name="brand" required />
+               </div>
+               <div class="row my-3 text-center d-flex justify-content-around">
+                 <div class="row col-5">
+                   <label for="description" class="whiteFont">Descrizione:</label>
+                   <textarea id="description" name="description" required></textarea>
+                 </div>
+                 <div class="d-flex justify-content-center">
+                   <button type="button" class="col-3 btnAdd my-3  btn btn-primary" onclick="addProduct()">Aggiungi Prodotto</button>
+                 </div>
+               </div>
+           </div>
+
+          </div>
+        </form>
+      </div>
     
 
-    <h3 class="text-center my-3">-TOUR DE BEERS-</h3>
-    <ul id="productList" class="row d-flex justify-content-center"></ul>
-  </div>
+    </div>
+      <h3 class="text-center my-3 whiteFont">-TOUR DE BEERS-</h3>
+      <ul id="productList" class="row d-flex justify-content-center"></ul>
     
     <script src="assets/javascript/script.js"></script>
   </body>
