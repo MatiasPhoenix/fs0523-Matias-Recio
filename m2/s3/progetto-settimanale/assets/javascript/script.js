@@ -1,70 +1,141 @@
+// Stai creando la parte front-end di uno shop online. In particolare sarai responsabile della creazione di un back-office, dove gli amministratori possono aggiungere e modificare i prodotti.
+// L’obiettivo di oggi è connettere un’interfaccia statica alle API per poter ricevere prodotti, crearne di nuovi, modificarli una volta creati e cancellarli all’occorrenza.
+// Questo è l’endpoint principale:
+// https://striveschool-api.herokuapp.com/api/product/
+// Questo è il modello di un prodotto:
 
+// Per creare nuovi prodotti dovrai partire da questo modello come riferimento, e formarlo con alcune delle proprietà richieste per poi inviarlo come payload della chiamata POST.
+// OGNI CHIAMATA DOVRÀ ESSERE AUTENTICATA! L’autenticazione di queste API è una “Token Based Authentication” per rendere privato l’accesso ai suoi contenuti. Senza essere autenticato non potrai ottenere i dati di cui hai bisogno.
+// Per prima cosa dovrai recuperare un tuo token personale registrandoti su: https://strive.school/studentlogin
+// Il token dovrà venire utilizzato come "authorization" header.
+// Obiettivi generali:
+// Avere una pagina back-office, in cui si potranno inserire i prodotti specificando i parametri obbligatori e facoltativi.
+// Una homepage, dove l’utente possa vedere i prodotti disponibili
+// Una pagina di dettaglio in cui visualizzare tutti i dettagli del prodotto.
+// Task:
+// Nella pagina di back-office: usa POST su /product con un payload per creare una nuova risorsa.
+// Aggiungi un bottone per la funzionalità di modifica di un prodotto già creato in precedenza (usa una PUT su /product/[PRODUCT_ID]).
+// Aggiungi un bottone per la cancellazione di uno specifico prodotto già esistente (usa DELETE su /product/[PRODUCT_ID]).
+// I tasti “modifica” e “cancella”  dovranno essere visibili SOLO se si è in modalità di modifica della risorsa.
+// Aggiungi una validazione di base per la creazione/modifica del prodotto nel form.
+// Aggiungi un bottone “Reset” per resettare il form.
+// Nella Homepage: premendo un bottone “modifica” su un prodotto si dovrà poterlo modificare.
+// Nella pagina Dettaglio: A questa pagina ci si arriverà cliccando un bottone “Scopri di più” sulla card in homepage.
 
+// fetch("https://striveschool-api.herokuapp.com/api/put-your-endpoint-here/", {
+// headers: {
+// "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTUwOGM4Y2Q2YWJmYTAwMThiN2ViMjUiLCJpYXQiOjE2OTk3Nzc2NzcsImV4cCI6MTcwMDk4NzI3N30.9A8S4q86eIk9-WBwpQTrANyhasyPyovhuEbcmTDPhAg"
+// }
+// })
 
-class Prodotto {
-    constructor(nome, descrizione, brand, immagine, prezzo) {
-        this.nome = nome;
-        this.descrizione = descrizione;
-        this.brand = brand;
-        this.immagine = immagine;
-        this.prezzo = prezzo + "€";
-    }
+const apiUrl = "https://striveschool-api.herokuapp.com/api/product"
+const token =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTUwOGM4Y2Q2YWJmYTAwMThiN2ViMjUiLCJpYXQiOjE2OTk3Nzc2NzcsImV4cCI6MTcwMDk4NzI3N30.9A8S4q86eIk9-WBwpQTrANyhasyPyovhuEbcmTDPhAg"
 
-    newProdotto() {
-        let card = document.createElement("div");
-        card.className = "card col-12 col-sm-6 col-md-4 col-lg-2 mx-1 my-1";
+function getAndDisplayProducts() {
+  fetch(apiUrl, {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  })
+    .then((response) => response.json())
+    .then((products) => {
+      const productList = document.getElementById("productList")
 
-        let cardBody = document.createElement("div");
-        cardBody.className = "card-body";
-        card.appendChild(cardBody);
+      productList.innerHTML = ""
+      products.forEach((product) => {
+        const listItem = document.createElement("li")
+        listItem.classList.add("col");
 
-        let div = document.createElement("div");
-        div.className = "card-title text-center";
-        div.innerHTML = this.nome;
-        cardBody.appendChild(div);
+        const imgElement = document.createElement("img")
+        imgElement.src = "assets/images/beer.jpg"
+        imgElement.alt = `Immagine di ${product.name}`
+        imgElement.classList.add("product-image")
 
-        let p = document.createElement("p");
-        p.innerHTML = this.descrizione;
-        cardBody.appendChild(p);
+        listItem.appendChild(imgElement)
+        
 
-        let img = document.createElement("img");
-        img.src = this.immagine;
-        img.className = "card-img mh-40";
-        cardBody.appendChild(img);
+        const textInfo = document.createElement("div")
+        textInfo.innerHTML = `
+          <p><strong>Nome:</strong> ${product.name}</p>
+          <p><strong>Prezzo:</strong> ${product.price}€</p>
+          <p><strong>Marca:</strong> ${product.brand}</p>
+          <p><strong>Descrizione:</strong> ${product.description}</p>
+          
+        `
+        listItem.appendChild(textInfo)
+        productList.appendChild(listItem)
 
-        let prezzo = document.createElement("p");
-        prezzo.innerHTML = this.prezzo;
-        cardBody.appendChild(prezzo);
-
-        document.querySelector("#container-principale").appendChild(card);
-    }                       
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "Rimuovi";
+        removeButton.addEventListener("click", () => removeProduct(product._id)); // Passa l'id del prodotto
+      
+        textInfo.appendChild(removeButton);
+      
+        listItem.appendChild(imgElement);
+        listItem.appendChild(textInfo);
+      
+        productList.appendChild(listItem);
+        
+      })
+    })
+    .catch((error) => {
+      console.error("Errore durante il recupero dei prodotti:", error)
+    })
 }
 
-    
-//Esempio di creazione del prodotto    
+function addProduct() {
+  const name = document.getElementById("name").value
+  const price = document.getElementById("price").value
+  const imageUrl = document.getElementById("imageUrl").value
+  const brand = document.getElementById("brand").value
+  const description = document.getElementById("description").value
 
-let prodotto1 = new Prodotto (
-    "Prodotto",
-    "Bla bla bla Bla bla bla Bla",
-    "Random",  
-    "https://picsum.photos/seed/picsum/200/300",
-    1
-);
-    
-let prodotto2 = new Prodotto (
-    "Prodotto2",
-    "hehe tototo totot",
-    "Randomss",  
-    "https://picsum.photos/seed/picsum/200/300",
-    2
-);
-        
-        
-    prodotto1.newProdotto();
-    prodotto1.newProdotto();
-    prodotto1.newProdotto();
-    prodotto1.newProdotto();
-    prodotto2.newProdotto();
-        
+  const productData = {
+    name: name,
+    price: price,
+    imageUrl: imageUrl,
+    brand: brand,
+    description: description,
+  }
 
-    
+  fetch(apiUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(productData),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Prodotto aggiunto :", data)
+      getAndDisplayProducts()
+    })
+    .catch((error) => {
+      console.error("Errore durante l'aggiunta del prodotto:", error)
+    })
+}
+
+
+function removeProduct(product) {
+  fetch(apiUrl + "/" + product, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  })
+   .then((response) => response.json())
+   .then((data) => {
+      console.log("Prodotto rimosso :", data)
+      getAndDisplayProducts()
+    })
+   .catch((error) => {
+      console.error("Errore durante la cancellazione del prodotto:", error)
+    })
+}
+
+getAndDisplayProducts()
+console.log()

@@ -1,0 +1,21 @@
+{
+"prodotti":[
+    {
+        "id" : "1",
+        "nome": "prodotto1",
+        "descrizione" : "descrizione prodotto1",
+        "brand" : "Chimichurri",
+        "immagine" : "https://picsum.photos/seed/picsum/100/150",
+        "prezzo" : 1
+    },
+
+    {
+        "id" : "2",
+        "nome": "prodotto2",
+        "descrizione" : "descrizione prodotto2",
+        "brand" : "Chimichurri",
+        "immagine" : "https://picsum.photos/seed/picsum/100/150",
+        "prezzo" : 1
+    }
+]
+}
