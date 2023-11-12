@@ -9,38 +9,48 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <div class="container">
-
+  <div class="container">
+    <form class="row specialBorder">
       <h2 class="my-4 text-center">-Back Office-</h2>
-      <div>
+      <div class="addPannel">
 
-        <form id="productForm">
+        <div class="mx-1 my-1">
+          
+          <form id="productForm">
           <label for="name">Nome del prodotto:</label>
           <input type="text" id="name" name="name" required />
           
           <label for="price">Prezzo:</label>
           <input type="number" id="price" name="price" required />
+              
+        </div>
+        <div class="my-1 row">
+            <div>
+
+              <label for="imageUrl">URL dell'immagine:</label>
+              <input type="text" id="imageUrl" name="imageUrl" required />
+              
+              <label for="brand">Marca:</label>
+              <input type="text" id="brand" name="brand" required />
+            </div>
+            <div class="row my-3 text-center d-flex justify-content-around">
+              <div class="row col-5">
+                <label for="description">Descrizione:</label>
+                <textarea id="description" name="description" required></textarea>
+              </div>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="col-3 btnAdd my-3  btn btn-primary" onclick="addProduct()">Aggiungi Prodotto</button>
+              </div>
+            </div>
+        </div>
           
       </div>
-      <div>
-
-        <label for="imageUrl">URL dell'immagine:</label>
-        <input type="text" id="imageUrl" name="imageUrl" required />
-        
-        <label for="brand">Marca:</label>
-        <input type="text" id="brand" name="brand" required />
-        
-        <label for="description">Descrizione:</label>
-        <textarea id="description" name="description" required></textarea>
-      </div>
-      
-      <button type="button" class="my-3" onclick="addProduct()">Aggiungi Prodotto</button>
     </form>
     
     
 
-    <h3>Lista Prodotti</h3>
-    <ul id="productList" class="row"></ul>
+    <h3 class="text-center my-3">-TOUR DE BEERS-</h3>
+    <ul id="productList" class="row d-flex justify-content-center"></ul>
   </div>
     
     <script src="assets/javascript/script.js"></script>

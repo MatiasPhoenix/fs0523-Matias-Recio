@@ -46,31 +46,40 @@ function getAndDisplayProducts() {
       productList.innerHTML = ""
       products.forEach((product) => {
         const listItem = document.createElement("li")
-        listItem.classList.add("col");
+        listItem.classList.add("col-3");
+        listItem.classList.add("card");
+        listItem.classList.add("mx-3");
+        listItem.classList.add("my-2");
+       
 
         const imgElement = document.createElement("img")
-        imgElement.src = "assets/images/beer.jpg"
+        imgElement.src = "assets/images/yourBeer.jpg"
         imgElement.alt = `Immagine di ${product.name}`
         imgElement.classList.add("product-image")
+        
 
         listItem.appendChild(imgElement)
         
 
         const textInfo = document.createElement("div")
         textInfo.innerHTML = `
-          <p><strong>Nome:</strong> ${product.name}</p>
-          <p><strong>Prezzo:</strong> ${product.price}€</p>
-          <p><strong>Marca:</strong> ${product.brand}</p>
-          <p><strong>Descrizione:</strong> ${product.description}</p>
+          <p class="card-title text-center"><strong> ${product.name}</strong></p>
+          <p class="list-group-item"><strong>Prezzo:</strong> ${product.price}€</p>
+          <p class="list-group-item"><strong>Marca:</strong> ${product.brand}</p>
+          <p class="card-text"><strong>Descrizione:</strong> <br> ${product.description}</p>
           
         `
+        textInfo.classList.add("card-body")
         listItem.appendChild(textInfo)
         productList.appendChild(listItem)
 
         const removeButton = document.createElement("button");
         removeButton.textContent = "Rimuovi";
         removeButton.addEventListener("click", () => removeProduct(product._id)); // Passa l'id del prodotto
-      
+        // removeButton.classList.add("card-link");
+        removeButton.classList.add("btnRemove");
+        removeButton.classList.add("btn");
+        removeButton.classList.add("btn-danger");
         textInfo.appendChild(removeButton);
       
         listItem.appendChild(imgElement);
