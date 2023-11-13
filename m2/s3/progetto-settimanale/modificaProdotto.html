@@ -25,25 +25,40 @@
       </header>
       <div class="container">
 
-          <h2 class="text-center text-white">Modifica Prodotto</h2>
+          <h2 class="text-center text-white my-4">Modifica Prodotto</h2>
           <form id="editProductForm" class="container row">
              
-                <div class="col d-flex justify-content-center">
+                <div class="row col d-flex justify-content-center">
+                    <div class="col-6">
 
-                  <label for="editName" class="text-white">Nome:</label>
-                  <input type="text" id="editName" class="mx-3" name="editName" required>
-                  
-                  <label for="editPrice" class="text-white">Prezzo:</label>
-                  <input type="text" id="editPrice" class="mx-3" name="editPrice" required>
-                  
+                        <label for="editName" class="text-white">Nome:</label>
+                        <input type="text" id="editName" name="editName" required>
+                        
+                        <label for="editPrice" class="text-white">Prezzo:</label>
+                        <input type="number" id="editPrice" name="editPrice" required>
+                    </div>
+                    <div class="col-6">
+                    <label for="editImageUrl" class="text-white">URL:</label>
+                    <input type="text" id="editImageUrl" name="editImageUrl" required>
+
+                      
+                      <label for="editBrand" class="text-white">Marca:</label>
+                      <input type="text" id="editBrand" name="editBrand" required>
+                    </div>
+                    <div class="col-12 text-center my-1">
+
+                        <label for="editDescription" class="text-white">Descrizione:</label>
+                        <textarea id="editDescription" name="editDescription" required></textarea>
+                    </div>
                 </div>
              
                 <div class="col-12 d-flex justify-content-center my-3">
 
-                  <button type="button" class="" onclick="updateProduct()">Salva Modifiche</button>
+                  <button type="button" class="btn btn-primary" onclick="updateProduct()">Salva Modifiche</button>
                 </div>
             </form>
         </div>
+        
 
     <footer class="py-3">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">

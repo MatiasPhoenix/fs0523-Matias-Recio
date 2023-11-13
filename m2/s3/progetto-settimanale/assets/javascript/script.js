@@ -52,7 +52,6 @@ function getAndDisplayProducts() {
         listItem.classList.add("mx-3");
         listItem.classList.add("my-4");
         
-       
 
         const imgElement = document.createElement("img")
         imgElement.src = "assets/images/yourBeer.jpg"
@@ -82,14 +81,44 @@ function getAndDisplayProducts() {
         removeButton.classList.add("btnRemove");
         removeButton.classList.add("btn");
         removeButton.classList.add("btn-danger");
-        // textInfo.appendChild(removeButton);
+        textInfo.appendChild(removeButton);
 
         //Modifica prodotto
         const editButton = document.createElement("a");
         editButton.textContent = "Modifica";
-        editButton.addEventListener("click", () => editProduct(product._id)); 
+        // editButton.addEventListener("click", () => editProduct(product._id));        
+        editButton.addEventListener('submit', async (event) => {
+          event.preventDefault()
+          
+          const newProduct = {
+              name: name.value,
+              description: description.value,
+              brand: brand.value,
+              imageUrl: imgUrl.value,
+              price: price.value
+          };
+          try {
+
+              const resp = await fetch(url, {
+                  method,
+                  body: JSON.stringify(newProduct),
+                  headers: {
+                      "Authorization": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTUwOGM4Y2Q2YWJmYTAwMThiN2ViMjUiLCJpYXQiOjE2OTk3Nzc2NzcsImV4cCI6MTcwMDk4NzI3N30.9A8S4q86eIk9-WBwpQTrANyhasyPyovhuEbcmTDPhAg",
+                      "Content-Type": "application/json"
+                  }
+              })
+              // window.location.assign("modificaProdotto.html")
+              console.log(resp)
+
+          } catch (error) {
+              console.log(error)
+          }
+
+      });
+
+      
         editButton.classList.add("btnEdit");
-        editButton.href = "modificaProdotto.html";
+        editButton.href = `modificaProdotto.html?id=${product._id}`;
         editButton.classList.add("btn");
         editButton.classList.add("btn-primary");
         textInfo.appendChild(editButton);
@@ -104,12 +133,20 @@ function getAndDisplayProducts() {
         buttonZone.appendChild(editButton);
         buttonZone.appendChild(removeButton);
         
+        
       })
+      
     })
     .catch((error) => {
       console.error("Errore durante il recupero dei prodotti:", error)
     })
+    
 }
+
+function editProduct(id) {
+  // Reindirizzamento alla pagina di modifica con l'ID del prodotto nell'URL
+  window.location.href = `modificaProdotto.html?id=${id}`;}
+
 //Creazione del prodotto
 function addProduct() {
   const name = document.getElementById("name").value
@@ -144,7 +181,24 @@ function addProduct() {
     })
 }
 
-
+//Funzinoe per rimuovere un prodotto
+function removeProduct(product) {
+  fetch(apiUrl + "/" + product, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  })
+   .then((response) => response.json())
+   .then((data) => {
+      console.log("Prodotto rimosso :", data)
+      getAndDisplayProducts()
+    })
+   .catch((error) => {
+      console.error("Errore durante la cancellazione del prodotto:", error)
+    })
+}
 
 getAndDisplayProducts()
 console.log()

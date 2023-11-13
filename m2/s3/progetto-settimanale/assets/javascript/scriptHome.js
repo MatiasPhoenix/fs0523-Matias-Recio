@@ -87,3 +87,6 @@ function getAndDisplayProducts() {
 }
 
 getAndDisplayProducts()
+
+// let prova = apiUrl.
+console.log(apiUrl);
