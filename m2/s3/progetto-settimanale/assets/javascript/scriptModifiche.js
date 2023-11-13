@@ -67,7 +67,7 @@ async function updateProduct() {
             if (!response.ok) {
                 throw new Error(`Errore nell'aggiornamento del prodotto: ${response.status}`);
             }
-
+            window.location.href = "../../creaProdotti.html";
             console.log("Prodotto aggiornato con successo!");
         } catch (error) {
             console.error(error);

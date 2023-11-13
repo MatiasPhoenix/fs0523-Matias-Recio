@@ -154,3 +154,7 @@ li.card{
       background-position: center;
       opacity: 0.9;
   }
+
+  .card-footer{
+    background-color: white;
+  }
