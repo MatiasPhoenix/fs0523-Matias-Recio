@@ -134,3 +134,23 @@ li.card{
     background-color: black;
     color: white;
   }
+
+  .modifyProduct {
+    height: 100vh;
+    background-image: url(../images/Monkey_Island_background-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: bottom;
+    opacity: 0.9;
+  }
+  .backgroundModifica {
+      background-image: url(../images/Monkey_Island_background.jpg);
+      width: 75%;
+      border: 5px solid black;
+      margin: 0 auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.9;
+  }
