@@ -1,7 +1,7 @@
 "use strict";
-class ChildAccount {
+class NewBankAccount {
     constructor(id, balanceInit) {
-        this.idProperty = "ChildAccount";
+        this.idProperty = "";
         this.balanceInit = 0;
         this.deposit = 0;
         this.withdraw = 0;
@@ -10,25 +10,34 @@ class ChildAccount {
     }
     addMoney(amount) {
         this.balanceInit += amount;
+        this.deposit += amount;
     }
     removeMoney(amount) {
         this.balanceInit -= amount;
+        this.withdraw += amount;
     }
 }
-class MotherAccount extends ChildAccount {
+let childBankAccount = new NewBankAccount("ChildAccount", 0);
+class MotherBankAccount extends NewBankAccount {
     constructor() {
         super(...arguments);
         this.idProperty = "MotherAccount";
-        this.balanceInit = 1000;
+        this.interessiPagati = 0;
     }
-    addMoney(amount) {
-        return this.addMoney(amount);
+    addInterest(amount) {
+        let interest = amount *= 0.1;
+        return interest;
     }
-    sendMoneyToSon(amount) {
-        ChildAccount.prototype.addMoney.call(this, amount);
-        return this.removeMoney(amount);
+    sendMoneySon(amount) {
+        let moneyPlusInterest = amount + this.addInterest(amount);
+        this.balanceInit -= moneyPlusInterest;
+        this.withdraw += amount;
+        this.interessiPagati += this.addInterest(amount);
+        childBankAccount.addMoney(amount);
+        console.log(this.idProperty + " ha mandato €" + amount + " a " + childBankAccount.idProperty + " pagando " + this.interessiPagati + "% (€" + this.addInterest(amount) + ") di interessi");
     }
 }
-sendMoneyToSon(100);
-console.log(MotherAccount);
-console.log(ChildAccount);
+let motherAccount = new MotherBankAccount("MotherBankAccount", 1000);
+motherAccount.sendMoneySon(100);
+console.log(motherAccount);
+console.log(childBankAccount);
