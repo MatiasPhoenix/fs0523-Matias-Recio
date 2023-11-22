@@ -3,21 +3,35 @@ abstract class LavoratoreAutonomo {
     }
 
     
-    get getUtileTasse():number{
-        return this.codredd;
-    }
+    abstract getUtileTasse():number
+        
+    abstract getTasseInps():number
 
-    get getTasseInps():number{
-        return this.tasseinps;
-    }
+    abstract getTasseIrpef():number
 
-    get getTasseIrpef():number{
-        return this.tasseirpef;
-    }
-
-    get getRedditoAnnuoNetto():number{
-        return this.redditoannuolordo;
-    }
+    abstract getRedditoAnnuoNetto():number
 
 }
 
+class lavoratore extends LavoratoreAutonomo{
+    getUtileTasse(): number {
+        
+        throw new Error("Method not implemented.");
+    }
+    getTasseInps(): number {
+        throw new Error("Method not implemented.");
+    }
+    getTasseIrpef(): number {
+        throw new Error("Method not implemented.");
+    }
+    getRedditoAnnuoNetto(): number {
+        throw new Error("Method not implemented.");
+    }
+    constructor( codredd:number, redditoannuolordo:number, tasseinps:number, tasseirpef:number){
+        super(codredd, redditoannuolordo, tasseinps, tasseirpef);
+    }
+
+
+
+
+}

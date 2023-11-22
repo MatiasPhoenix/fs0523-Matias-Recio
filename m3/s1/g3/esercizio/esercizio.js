@@ -6,16 +6,21 @@ class LavoratoreAutonomo {
         this.tasseinps = tasseinps;
         this.tasseirpef = tasseirpef;
     }
-    get getUtileTasse() {
-        return this.codredd;
+}
+class lavoratore extends LavoratoreAutonomo {
+    getUtileTasse() {
+        throw new Error("Method not implemented.");
     }
-    get getTasseInps() {
-        return this.tasseinps;
+    getTasseInps() {
+        throw new Error("Method not implemented.");
     }
-    get getTasseIrpef() {
-        return this.tasseirpef;
+    getTasseIrpef() {
+        throw new Error("Method not implemented.");
     }
-    get getRedditoAnnuoNetto() {
-        return this.redditoannuolordo;
+    getRedditoAnnuoNetto() {
+        throw new Error("Method not implemented.");
+    }
+    constructor(codredd, redditoannuolordo, tasseinps, tasseirpef) {
+        super(codredd, redditoannuolordo, tasseinps, tasseirpef);
     }
 }
