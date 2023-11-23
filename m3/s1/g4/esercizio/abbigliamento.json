@@ -1,0 +1,81 @@
+[
+    {
+        "id" : 1,
+        "codProd" : "primavera-abbigliamento",
+        "collezione" : "Primavera",
+        "capo" : "Maglietta",
+        "modello" : "Blabla",
+        "quantita" : 0,
+        "colore" : "Bianco",
+        "prezzoIvaEsclusa" : 0,
+        "prezzoIvaInclusa" : 0,
+        "disponibile" : true,
+        "saldo" : true
+    },
+    {
+        "id" : 2,
+        "codProd" : "primavera-abbigliamento",
+        "collezione" : "Primavera",
+        "capo" : "Pantaloncini",
+        "modello" : "Blabla",
+        "quantita" : 0,
+        "colore" : "Blu",
+        "prezzoIvaEsclusa" : 0,
+        "prezzoIvaInclusa" : 0,
+        "disponibile" : true,
+        "saldo" : true
+    },
+    {
+        "id" : 3,
+        "codProd" : "estate-mare",
+        "collezione" : "Estate",
+        "capo" : "Costume",
+        "modello" : "Chupacabras",
+        "quantita" : 0,
+        "colore" : "nero",
+        "prezzoIvaEsclusa" : 0,
+        "prezzoIvaInclusa" : 0,
+        "disponibile" : true,
+        "saldo" : true
+    },
+    {
+        "id" : 4,
+        "codProd" : "estate-mare",
+        "collezione" : "Estate",
+        "capo" : "Maglietta",
+        "modello" : "El Corto",
+        "quantita" : 0,
+        "colore" : "Arcobaleno",
+        "prezzoIvaEsclusa" : 0,
+        "prezzoIvaInclusa" : 0,
+        "disponibile" : true,
+        "saldo" : true
+    },
+    {
+        "id" : 5,
+        "codProd" : "primavera-abbigliamento",
+        "collezione" : "Primavera",
+        "capo" : "calzini",
+        "modello" : "Yorfut",
+        "quantita" : 0,
+        "colore" : "Bianco",
+        "prezzoIvaEsclusa" : 0,
+        "prezzoIvaInclusa" : 0,
+        "disponibile" : true,
+        "saldo" : true
+    },
+    {
+        "id" : 6,
+        "codProd" : "invermp-abbigliamento",
+        "collezione" : "Inverno",
+        "capo" : "Felpa",
+        "modello" : "Out-luogo",
+        "quantita" : 0,
+        "colore" : "Rosso",
+        "prezzoIvaEsclusa" : 0,
+        "prezzoIvaInclusa" : 0,
+        "disponibile" : true,
+        "saldo" : true
+    }
+
+]
