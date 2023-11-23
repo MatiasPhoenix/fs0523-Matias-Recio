@@ -12,7 +12,20 @@ function call() {
     return __awaiter(this, void 0, void 0, function* () {
         let res = yield fetch('abbigliamento.json');
         let abbDaVendere = yield res.json();
+        // abbDaVendere.forEach(abbDaVendere => console.log(abbDaVendere));
         return abbDaVendere;
     });
 }
+call();
+// async function mostra(){
+//     let mostra = await call();
+//     console.log(mostra);
+// }
+function cercaConId(number) {
+    return __awaiter(this, void 0, void 0, function* () {
+        let mostra = yield call();
+        console.log(mostra[number]);
+    });
+}
+cercaConId(4);
 //# sourceMappingURL=esercizio.js.map
