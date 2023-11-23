@@ -46,9 +46,15 @@ class AbbigliamentoX {
         this.disponibile = disponibile;
         this.saldo = saldo;
     }
+    calcolaIva(amount) {
+        amount = amount * 1.2;
+        return this.prezzoIvaEsclusa = this.prezzoIvaEsclusa + amount;
+    }
     getSaldoCapo(amount) {
-        let saldo = this.getSaldoCapo(amount);
+        let saldo = amount;
+        this.saldo = saldo;
         this.prezzoIvaInclusa -= saldo;
+        console.log("Questo capo d'abbigliamento è in saldo! Sconto di " + amount + "€");
         return saldo = amount;
     }
 }

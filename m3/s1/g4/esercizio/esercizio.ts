@@ -80,10 +80,17 @@ class AbbigliamentoX {
         this.disponibile = disponibile;
         this.saldo = saldo
     }
-
-    getSaldoCapo(amount:number):number{
-        let saldo = this.getSaldoCapo(amount);
+    calcolaIva(amount:number):number {
+        amount = amount * 1.2;
+        return this.prezzoIvaEsclusa = this.prezzoIvaEsclusa + amount; 
+    }
+    
+    getSaldoCapo(amount:number):number {
+        let saldo:number = amount;
+        this.saldo = saldo;
         this.prezzoIvaInclusa -= saldo;
+        console.log("Questo capo d'abbigliamento è in saldo! Sconto di "+amount+"€");
+        
         return saldo = amount;
         
     }
