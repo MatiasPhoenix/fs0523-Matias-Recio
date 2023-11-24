@@ -134,6 +134,7 @@ class SmartphoneXX extends Smartphone{
     constructor(){
         super(0, 0, 1);
         this.registroChiamate = [];
+        
     }
 
     chiamata(min: number): void {
@@ -152,10 +153,12 @@ smartphoneXYZ.ricarica(10)
 
 smartphoneXYZ.chiamata(3);
 smartphoneXYZ.chiamata(1);
-smartphoneXYZ.chiamata(5);
-console.log(smartphoneXYZ);
-
 smartphoneXYZ.chiamata(1);
+smartphoneXYZ.chiamata(1);
+smartphoneXYZ.chiamata(3);
+
+
+
 console.log(smartphoneXYZ);
 console.log("----|||||||||||||||||||||----");
 smartphoneXYZ.chiamata(1);

@@ -116,9 +116,9 @@ let smartphoneXYZ = new SmartphoneXX(); //class dispositivo creato
 smartphoneXYZ.ricarica(10);
 smartphoneXYZ.chiamata(3);
 smartphoneXYZ.chiamata(1);
-smartphoneXYZ.chiamata(5);
-console.log(smartphoneXYZ);
 smartphoneXYZ.chiamata(1);
+smartphoneXYZ.chiamata(1);
+smartphoneXYZ.chiamata(3);
 console.log(smartphoneXYZ);
 console.log("----|||||||||||||||||||||----");
 smartphoneXYZ.chiamata(1);
