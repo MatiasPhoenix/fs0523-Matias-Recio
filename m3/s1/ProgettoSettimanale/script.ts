@@ -115,8 +115,40 @@ console.log(smartphoneZX);
 console.log("Rubrica azzerata. Effettuate " + smartphoneZX.getNumeroChiamate()+ " chiamate fin'ora"); //controllo chiamate (adesso sono a zero)
 }
 
+//prova degli extra
+type registroChiamate = {
+    id:number,
+    durata:number,
+    infoChiamata:string,
+}
 
+class SmartphoneXX extends Smartphone{
+    
+    registroChiamate!:registroChiamate[];
 
+    constructor(){
+        super(0, 0, 1);
+        this.registroChiamate = [];
+    }
+
+    chiamata(min: number): void {
+        super.chiamata(min);
+        let date = new Date();
+        this.registroChiamate.push({id:this.numeroChiamate, durata:min, infoChiamata:"Chiamata effettuata il " + date.toLocaleString()});
+       
+    }
+    mostraRegistroChiamate(){
+        return this.registroChiamate
+    }
+}
+console.log("----|||||||||||||||||||||----");
+let smartphoneXYZ = new SmartphoneXX() //class dispositivo creato
+smartphoneXYZ.ricarica(10)
+
+smartphoneXYZ.chiamata(3);
+smartphoneXYZ.chiamata(1);
+smartphoneXYZ.chiamata(5);
+console.log(smartphoneXYZ);
 
 
 
