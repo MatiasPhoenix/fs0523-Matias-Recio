@@ -16,7 +16,40 @@ interface Sim {
 
 }
 
+//Oggetto dispositivo Smartphone
+class Smartphone implements Sim {
+    
+    constructor(public carica:number, public numeroChiamate: number, public costoMinuto:number){}
+    
+    ricarica(euro: number): void {
+        let credito = this.carica;
+        credito += euro;
+        return
+    }
+    numero404(): string {
+        let creditoResiduo;
+        let soldiSim = this.carica;
+        creditoResiduo = soldiSim + "€";
+        return creditoResiduo
+    }
+    getNumeroChiamate(): number {
+        return this.numeroChiamate;
+    }
+    chiamata(min: number): void {
+        this.numeroChiamate ++;
+        let costoChiamata = this.costoMinuto * min;
+        this.carica -= costoChiamata;
+        return;
+    }
+    azzeraChiamate(): void {
+        this.numeroChiamate = 0;
+        return
+    }
+    
+}
 
+//Oggetto dispositivo n°1
+let smartphoneA = new Smartphone(10, 0, 0.5)
 
 
 
