@@ -20,10 +20,16 @@ class Smartphone {
         return this.numeroChiamate;
     }
     chiamata(min) {
-        this.numeroChiamate++;
         let costoChiamata = this.costoMinuto * min;
-        this.carica -= costoChiamata;
-        return;
+        if (this.carica > costoChiamata) {
+            this.numeroChiamate++;
+            this.carica -= costoChiamata;
+            return;
+        }
+        else {
+            console.log("Il tuo credito residuo è insufficiente per effettuare la chiamata.");
+            return;
+        }
     }
     azzeraChiamate() {
         this.numeroChiamate = 0;
@@ -112,3 +118,7 @@ smartphoneXYZ.chiamata(3);
 smartphoneXYZ.chiamata(1);
 smartphoneXYZ.chiamata(5);
 console.log(smartphoneXYZ);
+smartphoneXYZ.chiamata(1);
+console.log(smartphoneXYZ);
+console.log("----|||||||||||||||||||||----");
+smartphoneXYZ.chiamata(1);
