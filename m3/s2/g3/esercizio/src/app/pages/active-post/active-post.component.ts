@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PostServiceService } from '../../post-service.service';
+import { IPosts } from '../../Models/posts';
 
 @Component({
   selector: 'app-active-post',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class ActivePostComponent {
 
+  post:IPosts[] = [];
+
+  constructor(private postSvc:PostServiceService){}
+
+  ngOnInit(){
+    this.post = this.postSvc.posts
+  }
 }
