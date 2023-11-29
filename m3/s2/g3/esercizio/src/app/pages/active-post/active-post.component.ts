@@ -14,6 +14,8 @@ export class ActivePostComponent {
   constructor(private postSvc:PostServiceService){}
 
   ngOnInit(){
-    this.post = this.postSvc.posts
+    this.post = this.postSvc.getActivePosts()
   }
+
+
 }

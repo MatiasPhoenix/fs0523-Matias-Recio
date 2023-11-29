@@ -60,4 +60,11 @@ export class PostServiceService {
 
   constructor() { }
 
+  getActivePosts(){
+    return this.posts.filter(post => post.active)
+  }
+
+  getInactivePosts(){
+    return this.posts.filter(post => !post.active)
+  }
 }
