@@ -16,4 +16,7 @@ export class AttiviComponent {
   ngOnInit(){
     this.posts = this.postSvc.getActivePost();
   }
+  toggleStatus(post:IPosts){
+    this.postSvc.togglePost(post)
+  }
 }

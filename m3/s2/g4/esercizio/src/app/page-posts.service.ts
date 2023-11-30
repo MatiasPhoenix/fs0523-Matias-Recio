@@ -67,6 +67,11 @@ export class PagePostsService {
     return this.posts.filter(post => !post.active);
   }
 
+  togglePost(posts:IPosts){
+    let index = this.posts.findIndex(post => post.id == posts.id);
+    posts.active = !posts.active;
+    this.posts.splice(index, 1,posts);
+  }
 
 
 }

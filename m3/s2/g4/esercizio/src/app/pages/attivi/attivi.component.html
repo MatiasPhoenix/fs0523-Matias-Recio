@@ -1,11 +1,9 @@
-<div *ngFor="let p of posts">
-  <div class="card col-4 my-2 mx-2" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title bg-secondary text-center py-1">{{p.title}}</h5>
-      <p class="card-text">{{p.body}}</p>
-      <p>Argomento: {{p.type}}</p>
-      <div class="text-center"><a href="#" class="btn btn-primary">Go somewhere</a></div>
-    </div>
-  </div>
-</div>
+<div class="row">
 
+  <div class="col-12" *ngFor="let p of posts">
+    <app-card-post [posts]="p">
+      <a class="btn btn-primary">Status</a>
+    </app-card-post>
+  </div>
+
+</div>

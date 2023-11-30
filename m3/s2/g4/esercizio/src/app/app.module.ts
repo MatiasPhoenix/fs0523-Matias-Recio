@@ -8,6 +8,7 @@ import { AttiviComponent } from './pages/attivi/attivi.component';
 import { InattiviComponent } from './pages/inattivi/inattivi.component';
 import { HeaderComponent } from './pageElement/header/header.component';
 import { FooterComponent } from './pageElement/footer/footer.component';
+import { CardPostComponent } from './pageElement/card-post/card-post.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './pageElement/footer/footer.component';
     AttiviComponent,
     InattiviComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CardPostComponent
   ],
   imports: [
     BrowserModule,

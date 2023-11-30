@@ -11,9 +11,12 @@ export class InattiviComponent {
 
   posts: IPosts[] = [];
 
-  constructor(public postsSvc:PagePostsService){}
+  constructor(public postSvc:PagePostsService){}
 
   ngOnInit(){
-    this.posts = this.postsSvc.getInactivePost();
+    this.posts = this.postSvc.getInactivePost();
+  }
+  toggleStatus(post:IPosts){
+    this.postSvc.togglePost(post)
   }
 }
