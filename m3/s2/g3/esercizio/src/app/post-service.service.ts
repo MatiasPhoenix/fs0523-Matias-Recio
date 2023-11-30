@@ -67,4 +67,10 @@ export class PostServiceService {
   getInactivePosts(){
     return this.posts.filter(post => !post.active)
   }
+
+  toggleActive (post:IPosts){
+    let index = this.posts.findIndex(post => post.id == post.id);
+    post.active = !post.active;
+    this.posts.splice(index, 1, post)
+  }
 }
