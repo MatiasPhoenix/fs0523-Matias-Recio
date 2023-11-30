@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IPosts } from '../../Models/iposts';
+import { PagePostsService } from '../../page-posts.service';
 
 @Component({
   selector: 'app-inattivi',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class InattiviComponent {
 
+  posts: IPosts[] = [];
+
+  constructor(public postsSvc:PagePostsService){}
+
+  ngOnInit(){
+    this.posts = this.postsSvc.getInactivePost();
+  }
 }

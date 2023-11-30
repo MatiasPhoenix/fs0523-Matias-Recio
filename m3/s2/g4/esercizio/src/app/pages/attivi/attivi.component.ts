@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IPosts } from '../../Models/iposts';
+import { PagePostsService } from '../../page-posts.service';
 
 @Component({
   selector: 'app-attivi',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AttiviComponent {
 
+  posts: IPosts[] = [];
+
+  constructor(public postSvc:PagePostsService){}
+
+  ngOnInit(){
+    this.posts = this.postSvc.getActivePost();
+  }
 }

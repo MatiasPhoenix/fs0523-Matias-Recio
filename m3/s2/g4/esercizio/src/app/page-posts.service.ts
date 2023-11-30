@@ -24,16 +24,16 @@ export class PagePostsService {
     {
       id: 2,
       body:"bla bla bla bla bla bla bla bla bla bla",
-      title: "Super Titolo news2",
+      title: "Super Titolo education2",
       active: false,
-      type: "news"
+      type: "education"
     },
     {
       id: 3,
       body:"bla bla bla bla bla bla bla bla bla bla",
-      title: "Super Titolo news3",
+      title: "Super Titolo education3",
       active: true,
-      type: "news"
+      type: "education"
     },
     {
       id: 4,
@@ -59,6 +59,13 @@ export class PagePostsService {
   ];
 
   constructor() { }
+
+  getActivePost(){
+    return this.posts.filter(post => post.active );
+  }
+  getInactivePost(){
+    return this.posts.filter(post => !post.active);
+  }
 
 
 
