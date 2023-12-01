@@ -1,5 +1,22 @@
 {
 
-"todoList":[]
+"todoList":[
+  {
+    "id":0,
+    "title":"spesa",
+    "completed":true
+  },
+  {
+    "id":1,
+    "title":"chiama pippo",
+    "completed":true
+  },
+  {
+    "id":2,
+    "title":"guarda serie",
+    "completed":true
+  }
+
+]
 
 }

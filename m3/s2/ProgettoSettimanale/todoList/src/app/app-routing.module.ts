@@ -5,7 +5,7 @@ import { CompletedComponent } from './Pages/completed/completed.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'todo',
     component: TodoComponent
   },
   {

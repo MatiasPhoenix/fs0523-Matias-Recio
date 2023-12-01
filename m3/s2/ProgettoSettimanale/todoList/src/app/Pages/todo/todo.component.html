@@ -1,1 +1,10 @@
-<p>todo works!</p>
+<div *ngFor="let t of todoArr">
+  <p>{{t.title}}</p>
+</div>
+
+<form>
+  <input class="newTodo" type="text" placeholder="Cosa vuoi ricordare?">
+  <button >+</button>
+</form>
+
+<!-- (click)="newToDo()" -->
