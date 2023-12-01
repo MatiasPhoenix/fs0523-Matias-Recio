@@ -13,10 +13,10 @@ constructor(public todoSvc:TodoListService){}
 
 todoArr:ITodoList[] = [];
 
-newTodoElement:ITodoList = {
-  title:"",
-  completed: true
-};
+// newTodoElement:ITodoList = {
+//   title:"",
+//   completed: true
+// };
 
 ngOnInit(){
   this.todoSvc.getAll().then(todoArr => this.todoArr = todoArr)
