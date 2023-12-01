@@ -9,9 +9,9 @@ import { TodoListService } from '../../todo-list.service';
 })
 export class TodoComponent {
 
-todoArr:ITodoList[] = [];
-
 constructor(public todoSvc:TodoListService){}
+
+todoArr:ITodoList[] = [];
 
 newTodoElement:ITodoList = {
   title:"",
@@ -21,9 +21,12 @@ newTodoElement:ITodoList = {
 ngOnInit(){
   this.todoSvc.getAll().then(todoArr => this.todoArr = todoArr)
 }
-// saveToDo(){
-//   this.todoSvc.createToDo()
-// }
+
+
+saveToDo(todo:ITodoList){
+  this.todoSvc.createToDo(todo)
+}
+
 
 
 
