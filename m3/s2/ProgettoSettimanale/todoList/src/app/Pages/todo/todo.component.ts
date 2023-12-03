@@ -26,8 +26,10 @@ ngOnInit(){
 }
 
 saveToDo(){
-  this.todoArr.push(this.newTodoElement)
+  this.todoArr.push(this.newTodoElement);
   this.todoSvc.createToDo(this.newTodoElement);
+  this.ngOnInit()
+  this.newTodoElement.title = '';
 }
 
 deleteTodo(id:number|undefined){
