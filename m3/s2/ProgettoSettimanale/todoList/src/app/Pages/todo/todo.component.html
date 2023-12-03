@@ -1,15 +1,16 @@
+
 <div *ngFor="let t of todoArr">
   <p>{{t.title}}</p>
+
 </div>
+  <form>
+    <input [(ngModel)]="newTodoElement.title" class="newTodo" type="text" name="title" placeholder="Cosa vuoi ricordare?">
+    <button (click)="saveToDo()">+</button>
+  </form>
 
 
-<form>
-  <input class="newTodo" type="text" name="title" placeholder="Cosa vuoi ricordare?">
-  <button (click)="saveToDo(t.title)">+</button>
-</form>
 
-{{todoArr}}
-<!-- {{ todoArr |json }} -->
+
 
 
 

@@ -16,24 +16,19 @@
       "completed": true
     },
     {
-      "title": "",
+      "title": "ciao",
       "completed": true,
       "id": 3
     },
     {
-      "title": "",
+      "title": "facciamo una prova, trallallero",
       "completed": true,
       "id": 4
     },
     {
-      "title": "",
+      "title": "asdasd",
       "completed": true,
       "id": 5
-    },
-    {
-      "title": "",
-      "completed": true,
-      "id": 6
     }
   ]
 }

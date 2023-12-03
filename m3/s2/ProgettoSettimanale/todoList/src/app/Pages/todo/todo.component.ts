@@ -13,21 +13,28 @@ constructor(public todoSvc:TodoListService){}
 
 todoArr:ITodoList[] = [];
 
-// newTodoElement:ITodoList = {
-//   title:"",
-//   completed: true
-// };
+newTodoElement:ITodoList = {
+  title:"",
+  completed: true
+};
+
+// save(){
+//   this.todoSvc.createToDo(this.newTodoElement);
+// }
+
 
 ngOnInit(){
-  this.todoSvc.getAll().then(todoArr => this.todoArr = todoArr)
+  this.todoSvc.getAll().then(todoArr => {this.todoArr = todoArr
+
+    console.log(this.todoArr);
+  })
+
 }
 
-
-saveToDo(todo:ITodoList){
-  this.todoSvc.createToDo(todo)
+saveToDo(){
+  this.todoArr.push(this.newTodoElement)
+  this.todoSvc.createToDo(this.newTodoElement);
 }
-
-
 
 
 }
