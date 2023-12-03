@@ -23,11 +23,22 @@ export class TodoListService {
     }).then(response => response.json());
   }
   updateToDo(todo:ITodoList):Promise<ITodoList>{
-    return fetch(this.apiUrl+`${todo.id}`,{
+    return fetch(this.apiUrl+`/${todo.id}`,{
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(todo)
     }).then(response => response.json());
+  }
+  togleId(todo:ITodoList):Promise<ITodoList>{
+    return fetch(this.apiUrl+`/${todo.id}`,{
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(todo)
+    }).then(response => response.json())
+    .then(todo =>
+      todo.forEach( (t:ITodoList) => {
+        t.completed = !t.completed;
+      }));
   }
   deleteToDo(id:number):Promise<ITodoList>{
     return fetch(this.apiUrl+`/${id}`,{

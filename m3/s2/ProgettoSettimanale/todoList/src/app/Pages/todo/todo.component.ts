@@ -15,15 +15,14 @@ todoArr:ITodoList[] = [];
 
 newTodoElement:ITodoList = {
   title:"",
-  completed: true
+  completed: false
 };
 
 
 
 ngOnInit(){
-  this.todoSvc.getAll().then(todoArr => {this.todoArr = todoArr
-  console.log(this.todoArr);
-  })
+  this.todoSvc.getAll()
+  .then(todo => this.todoArr = todo.filter(todo => !todo.completed))
 }
 
 saveToDo(){
@@ -34,11 +33,19 @@ saveToDo(){
 deleteTodo(id:number|undefined){
   if(!id)return
   this.todoSvc.getById(id).then(todo => {
-  todo.completed = !todo.completed;
   this.todoSvc.deleteToDo(id);
   this.todoArr = this.todoArr.filter(todoAr => todoAr.title !== todo.title);
   })
   }
+
+changeTodo(id:number|undefined){
+  if(!id)return
+  this.todoSvc.getById(id).then(todo => {
+  todo.completed = !todo.completed;
+  this.todoSvc.updateToDo(todo);
+  this.todoArr = this.todoArr.filter(todoAr => todoAr.title !== todo.title);
+  })
+}
 
 }
 

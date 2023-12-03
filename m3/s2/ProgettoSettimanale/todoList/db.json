@@ -1,29 +1,29 @@
 {
   "todoList": [
     {
-      "id": 0,
-      "title": "spesa",
-      "completed": true
-    },
-    {
       "id": 1,
       "title": "chiama pippo",
-      "completed": true
+      "completed": false
     },
     {
       "id": 2,
       "title": "guarda serie",
-      "completed": true
-    },
-    {
-      "title": "ciao",
-      "completed": true,
-      "id": 3
+      "completed": false
     },
     {
       "title": "uno dos tres, un pasito pa delante maria",
       "completed": true,
       "id": 5
+    },
+    {
+      "title": "lalalala",
+      "completed": true,
+      "id": 6
+    },
+    {
+      "title": "fiacciamo una prova",
+      "completed": false,
+      "id": 7
     }
   ]
 }
