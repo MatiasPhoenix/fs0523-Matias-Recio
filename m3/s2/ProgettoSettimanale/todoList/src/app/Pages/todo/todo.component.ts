@@ -18,7 +18,8 @@ newTodoElement:ITodoList = {
   completed: false
 };
 
-
+oldTodo:ITodoList|null = null;
+loading:boolean = false;
 
 ngOnInit(){
   this.todoSvc.getAll()
@@ -26,10 +27,15 @@ ngOnInit(){
 }
 
 saveToDo(){
+  this.loading = true;
   this.todoArr.push(this.newTodoElement);
   this.todoSvc.createToDo(this.newTodoElement);
-  this.ngOnInit()
+  this.oldTodo = this.newTodoElement;
+  this.ngOnInit();
   this.newTodoElement.title = '';
+  setTimeout(() => {
+    this.oldTodo = null;
+  }, 1500);
 }
 
 deleteTodo(id:number|undefined){

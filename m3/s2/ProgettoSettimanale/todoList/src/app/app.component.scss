@@ -2,13 +2,37 @@
   text-align: center;
 }
 a{
- font-size: 2rem;
- text-decoration: none;
- color: black;
- padding-left: 120px;
- padding-right: 120px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 40px;
+    &:hover {
+    color: rgb(15, 83, 21);
+    }
+
+    &:visited {
+      color: rgb(64, 0, 255);
+    }
+
+    &:active, &:focus {
+      // text-decoration: underline;
+      background-color: rgb(152, 132, 131);
+    }
 }
 
 .toDoHeader{
   text-align: center;
+}
+.headerContainer {
+  background-color: red;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  z-index: 600;
+  top:0;
+  width: 100vw;
+
+
 }
