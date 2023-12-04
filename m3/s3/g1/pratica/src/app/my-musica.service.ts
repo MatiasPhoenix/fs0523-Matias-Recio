@@ -1,24 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
-import { IMusica } from './Model/i-musica';
+import { Observable } from 'rxjs';
+import { ISmartphones } from './Model/i-smartphone';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class MyMusicaService {
+export class MySmartphoneService {
 
 
   apiUrl:string = "https://dummyjson.com/products";
 
-  subject:Subject<string> = new Subject();
-  lastPizza$ = this.subject.asObservable();
 
-  constructor(
-    private http:HttpClient
-  ) { }
+  constructor(private http:HttpClient){}
 
-  getAll():Observable<IMusica[]>{
-    return this.http.get<IMusica[]>(this.apiUrl);
+  getAllProducts() {
+    return this.http.get<ISmartphones[]>('https://dummyjson.com/products');
   }
+
 }

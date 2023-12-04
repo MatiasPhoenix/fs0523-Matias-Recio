@@ -1,4 +1,4 @@
-export interface IMusica {
+export interface ISmartphones {
   "id"?: number,
   "title": string,
   "description": string,
