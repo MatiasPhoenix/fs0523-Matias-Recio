@@ -34,6 +34,8 @@ export class InputPageComponent {
   constructor(public utentiSvc:NewUsersService) {}
 
   submit(){
+    this.users.push(this.newUser);
+    console.log(this.users);
 
   }
 
