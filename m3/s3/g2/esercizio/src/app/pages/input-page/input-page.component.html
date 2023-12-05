@@ -1,10 +1,23 @@
 <form>
 
   <input type="text" class="form-control" [(ngModel)]="newUser.nome" name="nome" placeholder="Il tuo nome">
-
   <input type="text" class="form-control" [(ngModel)]="newUser.cognome" name="cognome" placeholder="Il tuo cognome">
+  <input type="password" class="form-control" [(ngModel)]="newUser.password" name="password" placeholder="la tua password">
+  <input type="password" class="form-control" [(ngModel)]="newUser.confermaPassword" name="confPass" placeholder="Conferma password">
+  <input type="text" class="form-control" [(ngModel)]="newUser.immagineProfilo" name="imgProfilo" placeholder="img profilo"><!--da modificare-->
+  <input type="text" class="form-control" [(ngModel)]="newUser.biografia" name="biografia" placeholder="Racconta qualcosa di te"><!--da modificare-->
+  <input type="text" class="form-control" [(ngModel)]="newUser.username" name="username" placeholder="Scegli un Username">
+</form>
+
+<div class="form-group">
+  <p>Scegli un genere:</p>
+  <div class="form-check" *ngFor="let g of genere">
+    <input [id]="g" [value]="g" class="form-check-input"
+    type="radio" ngModel name="genere">
+  <label [for]="g">{{g}}</label>
+</div>
+
 
 
   <button (click)="submit()" class="btn btn-primary">Invia</button>
 
-</form>

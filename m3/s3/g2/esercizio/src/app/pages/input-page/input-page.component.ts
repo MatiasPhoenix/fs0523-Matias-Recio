@@ -23,6 +23,14 @@ export class InputPageComponent {
     username: ""
   }
 
+  genere:string[] = [
+    'Uomo',
+    'Donna',
+    'Alieno',
+    'Reptiliano',
+    'Non definito'
+  ];
+
   constructor(public utentiSvc:NewUsersService) {}
 
   submit(){
