@@ -1,1 +1,10 @@
-<p>input-page works!</p>
+<form>
+
+  <input type="text" class="form-control" [(ngModel)]="newUser.nome" name="nome" placeholder="Il tuo nome">
+
+  <input type="text" class="form-control" [(ngModel)]="newUser.cognome" name="cognome" placeholder="Il tuo cognome">
+
+
+  <button (click)="submit()" class="btn btn-primary">Invia</button>
+
+</form>
