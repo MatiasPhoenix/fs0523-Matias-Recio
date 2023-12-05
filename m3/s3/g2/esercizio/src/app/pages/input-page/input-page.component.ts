@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IUtenti } from '../../Models/iutenti';
 import { NewUsersService } from '../../new-users.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-input-page',
@@ -33,11 +34,9 @@ export class InputPageComponent {
 
   constructor(public utentiSvc:NewUsersService) {}
 
-  submit(){
+  submit(form:NgForm){
     this.users.push(this.newUser);
+    form.reset()
     console.log(this.users);
-
   }
-
-
 }
