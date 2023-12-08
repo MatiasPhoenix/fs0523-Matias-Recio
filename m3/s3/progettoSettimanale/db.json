@@ -1,10 +1,16 @@
 {
   "users": [
     {
-      "email": "mario@rossi.it",
-      "password": "$2a$10$J7eKkQ6mlr4nKWdH4kfhTeIgeCAacxiw3xp0VGJeiFTA9jaUE1ZvW",
-      "nome": "mario",
+      "email": "komyw@mailinator.com",
+      "password": "$2a$10$3irVgb8w1TbFaMwHVj/zfeVp3tHPfWAahSRs/O65N3THerjC1gfNe",
+      "nome": "Omnis quo nesciunt ",
       "id": 1
+    },
+    {
+      "email": "lalala@lalala.com",
+      "password": "$2a$10$rMKvIn.y21pP5T5N8pI7Xui0trz7q95dSHQf2knB11uokjQa/ugqi",
+      "nome": "asdasd",
+      "id": 2
     }
   ]
 }

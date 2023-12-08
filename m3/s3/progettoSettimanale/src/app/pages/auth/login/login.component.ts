@@ -16,14 +16,14 @@ export class LoginComponent {
     ){}
 
   loginData:iLogin = {
-    email: 'mario@rossi.it',
+    email: 'lalala@lalala.com',
     password: 'password'
   }
 
   save(){
     this.authSvc.login(this.loginData)
     .subscribe(data => {
-        this.router.navigate(['/dashboard'])
+    this.router.navigate(['/dashboard']);
     })
   }
 

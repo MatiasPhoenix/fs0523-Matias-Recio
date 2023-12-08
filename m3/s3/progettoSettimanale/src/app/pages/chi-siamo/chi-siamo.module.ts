@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { ChiSiamoRoutingModule } from './chi-siamo-routing.module';
 import { ChiSiamoComponent } from './chi-siamo.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +13,10 @@ import { ChiSiamoComponent } from './chi-siamo.component';
   ],
   imports: [
     CommonModule,
+    // BrowserModule,
+    FormsModule,
     ChiSiamoRoutingModule
+
   ]
 })
 export class ChiSiamoModule { }
