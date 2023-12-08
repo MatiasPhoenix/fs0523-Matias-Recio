@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MeteoAppService } from '../../meteo-app.service';
 
 
 
@@ -10,9 +11,17 @@ import { Component } from '@angular/core';
 })
 export class ChiSiamoComponent {
 
-  prova(){
-    console.log("asdasdasd");
-}
+  city = '';
+  weatherData: any;
+
+  constructor(private meteoAppSvc: MeteoAppService) {}
+
+  getWeather(): void {
+    this.meteoAppSvc.getWeather(this.city).subscribe((data) => {
+      this.weatherData = data;
+      console.log('Dati del meteo:', this.weatherData);
+    });
+  }
 
 
 }

@@ -1,3 +1,8 @@
-<p>chi-siamo works!</p>
-<button (click)="prova()" class="btn btn-primary">Er bottone</button>
 
+
+<input [(ngModel)]="city" placeholder="Inserisci il nome della città" />
+<button (click)="getWeather()">Ottieni Meteo</button>
+
+<div *ngIf="weatherData">
+  <!-- Visualizza i dati del meteo qui -->
+</div>

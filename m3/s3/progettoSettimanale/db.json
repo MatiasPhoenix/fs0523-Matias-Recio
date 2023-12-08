@@ -11,6 +11,12 @@
       "password": "$2a$10$rMKvIn.y21pP5T5N8pI7Xui0trz7q95dSHQf2knB11uokjQa/ugqi",
       "nome": "asdasd",
       "id": 2
+    },
+    {
+      "email": "lalalala@lalalala.com",
+      "password": "$2a$10$A3HXuEkkz7OZSqK5OOoGBOacFXTbrF8oxlRSf/BMSI3M/F/b1uEEm",
+      "nome": "ElSeñor",
+      "id": 3
     }
   ]
 }
