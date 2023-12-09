@@ -3,20 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { ChiSiamoRoutingModule } from './chi-siamo-routing.module';
 import { ChiSiamoComponent } from './chi-siamo.component';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+// import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
   declarations: [
-    ChiSiamoComponent
+    ChiSiamoComponent,
   ],
   imports: [
-    CommonModule,
     // BrowserModule,
+    CommonModule,
     FormsModule,
-    ChiSiamoRoutingModule
+    ChiSiamoRoutingModule,
+
 
   ]
+
 })
 export class ChiSiamoModule { }

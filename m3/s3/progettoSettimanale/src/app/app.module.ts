@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './pages/auth/auth.interceptor';
 
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -13,9 +16,11 @@ import { AuthInterceptor } from './pages/auth/auth.interceptor';
 
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     {

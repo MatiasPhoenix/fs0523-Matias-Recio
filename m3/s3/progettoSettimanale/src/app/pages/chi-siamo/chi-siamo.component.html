@@ -1,8 +1,33 @@
 
 
-<input [(ngModel)]="city" placeholder="Inserisci il nome della città" />
+<input [(ngModel)]="city" name="name" placeholder="Inserisci il nome della città" />
 <button (click)="getWeather()">Ottieni Meteo</button>
 
-<div *ngIf="weatherData">
+
+<div class="row">
+  <p> {{today.city}}</p>
+  <div class="col-6">
+
+    <p>{{ today.giorno }}</p>
+    <p>{{ today.tempo }}</p>
+  </div>
+
+  <div class="col-6">
+
+    <p>{{ day1.giorno }}</p>
+    <p>{{ day1.tempo }}</p>
+  </div>
+
+  <div class="col-6">
+
+    <p>{{ day2.giorno }}</p>
+    <p>{{ day2.tempo }}</p>
+  </div>
+
+  <div class="col-6">
+
+    <p>{{ day3.giorno }}</p>
+    <p>{{ day3.tempo }}</p>
+  </div>
 
 </div>
