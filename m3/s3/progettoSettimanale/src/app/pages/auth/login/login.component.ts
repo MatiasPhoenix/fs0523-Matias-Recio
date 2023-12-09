@@ -16,7 +16,7 @@ export class LoginComponent {
     ){}
 
   loginData:iLogin = {
-    email: 'lalala@lalala.com',
+    email: 'lalalala@lalalala.com',
     password: 'password'
   }
 
