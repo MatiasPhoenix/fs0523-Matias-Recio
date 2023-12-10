@@ -16,6 +16,11 @@ export class AppComponent {
   ngOnInit(){
     this.authSvc.user$.subscribe(accessData => {
         this.userName = accessData?.user.nome
+
     })
   }
 }
+
+
+
+

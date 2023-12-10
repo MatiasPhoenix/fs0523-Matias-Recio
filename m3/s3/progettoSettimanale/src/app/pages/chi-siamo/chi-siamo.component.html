@@ -1,36 +1,79 @@
 
-<div class="container text-center py-5">
+<div class="container text-center">
 
-  <input [(ngModel)]="city" name="name" placeholder="Inserisci il nome della città" />
-  <button (click)="getWeather()">Ottieni Meteo</button>
 
-  <img src="http://openweathermap.org/img/wn/{{weatherData.list[0].weather[0].icon}}@2x.png" alt="">
+    <h2>Che meteo fa?</h2>
+    <input [(ngModel)]="city" name="name" placeholder="nome della città" />
+    <button (click)="getWeather()">Ottieni Meteo</button>
 
-  <div class="row">
-    <p> {{today.city}}</p>
-    <div class="col-6">
+    <img (click)="saveMyMeteo(city)" src="http://openweathermap.org/img/wn/{{weatherData.list[0].weather[0].icon}}@2x.png" alt="">
 
-      <p>{{ today.giorno }}</p>
-      <img src="http://openweathermap.org/img/wn/{{weatherData.list[0].weather[0].icon}}@2x.png" alt="">
+
+  <div class="row d-flex justify-content-center">
+    <div class="row col-12 align-items-center justify-content-between">
+      <h1 class=""><span>{{'Ecco il meteo a '}}</span> {{ today.city}}</h1>
     </div>
 
-    <div class="col-6">
+      <div class="meteoSpace row col-12 bg-primary border border-dark">
 
-      <p>{{ day1.giorno }}</p>
-      <img src="http://openweathermap.org/img/wn/{{weatherData.list[7].weather[0].icon}}@2x.png" alt="">
+        <!-- informazione meteo oggi -->
+        <h5 class="pt-2">{{ oggiGiorno }}</h5>
+          <div class="col-6 text-end align-items-center">
+            <img class="pb-5" src="http://openweathermap.org/img/wn/{{weatherData.list[0].weather[0].icon}}@2x.png" alt="">
+          </div>
+        <div class="col-6">
+          <p>{{ 'Vento: ' + weatherData.list[0].wind.speed + ' kmh' }}</p>
+          <p>{{ 'Umidità: ' + weatherData.list[0].main.humidity + '%' }}</p>
+        </div>
+        <p class="col-5">{{ 'Temp: ' + (weatherData.list[0].main.temp_max - 273.15 | number: '1.0-1') + '°C/' + (weatherData.list[0].main.temp_min - 276.15 | number: '1.0-1') + '°C'}}</p>
+        <p class="col-6 text-start">{{ 'Temp. percepita: ' + (weatherData.list[0].main.feels_like - 273.15 | number: '1.0-1') + '°C'}}</p>
+      </div>
+
+      <div class="meteoSpace row col-12 bg-primary border border-dark">
+
+        <!-- informazione meteo oggi -->
+        <h5 class="pt-2">{{ domaniGiorno }}</h5>
+          <div class="col-6 text-end align-items-center">
+            <img class="pb-5" src="http://openweathermap.org/img/wn/{{weatherData.list[7].weather[0].icon}}@2x.png" alt="">
+          </div>
+        <div class="col-6">
+          <p>{{ 'Vento: ' + weatherData.list[7].wind.speed + ' kmh' }}</p>
+          <p>{{ 'Umidità: ' + weatherData.list[7].main.humidity + '%' }}</p>
+        </div>
+        <p class="col-5">{{ 'Temp: ' + (weatherData.list[7].main.temp_max - 273.15 | number: '1.0-1') + '°C/' + (weatherData.list[7].main.temp_min - 276.15 | number: '1.0-1') + '°C'}}</p>
+        <p class="col-6 text-start">{{ 'Temp. percepita: ' + (weatherData.list[7].main.feels_like - 273.15 | number: '1.0-1') + '°C'}}</p>
+      </div>
+
+      <div class="meteoSpace row col-12 bg-primary border border-dark">
+
+        <!-- informazione meteo oggi -->
+        <h5 class="pt-2">{{ day2.giorno }}</h5>
+          <div class="col-6 text-end align-items-center">
+            <img class="pb-5" src="http://openweathermap.org/img/wn/{{weatherData.list[15].weather[0].icon}}@2x.png" alt="">
+          </div>
+        <div class="col-6">
+          <p>{{ 'Vento: ' + weatherData.list[15].wind.speed + ' kmh' }}</p>
+          <p>{{ 'Umidità: ' + weatherData.list[15].main.humidity + '%' }}</p>
+        </div>
+        <p class="col-5">{{ 'Temp: ' + (weatherData.list[15].main.temp_max - 273.15 | number: '1.0-1') + '°C/' + (weatherData.list[15].main.temp_min - 276.15 | number: '1.0-1') + '°C'}}</p>
+        <p class="col-6 text-start">{{ 'Temp. percepita: ' + (weatherData.list[15].main.feels_like - 273.15 | number: '1.0-1') + '°C'}}</p>
+      </div>
+
+      <div class="meteoSpace row col-12 bg-primary border border-dark">
+
+        <!-- informazione meteo oggi -->
+        <h5 class="pt-2">{{ day3.giorno }}</h5>
+          <div class="col-6 text-end align-items-center">
+            <img class="pb-5" src="http://openweathermap.org/img/wn/{{weatherData.list[23].weather[0].icon}}@2x.png" alt="">
+          </div>
+        <div class="col-6">
+          <p>{{ 'Vento: ' + weatherData.list[23].wind.speed + ' kmh' }}</p>
+          <p>{{ 'Umidità: ' + weatherData.list[23].main.humidity + '%' }}</p>
+        </div>
+        <p class="col-5">{{ 'Temp: ' + (weatherData.list[23].main.temp_max - 273.15 | number: '1.0-1') + '°C/' + (weatherData.list[23].main.temp_min - 276.15 | number: '1.0-1') + '°C'}}</p>
+        <p class="col-6 text-start">{{ 'Temp. percepita: ' + (weatherData.list[23].main.feels_like - 273.15 | number: '1.0-1') + '°C'}}</p>
+      </div>
     </div>
-
-    <div class="col-6">
-
-      <p>{{ day2.giorno }}</p>
-      <img src="http://openweathermap.org/img/wn/{{weatherData.list[15].weather[0].icon}}@2x.png" alt="">
-    </div>
-
-    <div class="col-6">
-
-      <p>{{ day3.giorno }}</p>
-      <img src="http://openweathermap.org/img/wn/{{weatherData.list[23].weather[0].icon}}@2x.png" alt="">
-    </div>
-
   </div>
-</div>
+
+  <p class="disclaimer">Questo meteo potrebbe sbagliare. Non ti fidare fra, affacciati alla finestra e fai prima</p>

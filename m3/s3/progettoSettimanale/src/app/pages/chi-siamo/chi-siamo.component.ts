@@ -21,9 +21,14 @@ export class ChiSiamoComponent {
   constructor(private meteoAppSvc: MeteoAppService) {}
 
   meteoDay:IGiorno[] = []
+  myMeteo:IGiorno[] = []
+
 
   city = '';
   weatherData: any;
+
+  oggiGiorno = "Oggi";
+  domaniGiorno = "Domani";
 
   today:IGiorno = {
     city:"",
@@ -53,6 +58,9 @@ export class ChiSiamoComponent {
     temperatura: ""
   };
 
+  ngOnInit(){
+    this.getWeather();
+  }
 
   getWeather(): void {
     this.meteoAppSvc.getWeather(this.city).subscribe((data) => {
@@ -99,39 +107,23 @@ export class ChiSiamoComponent {
       this.day2 = getWeatherAtIndex(15) || this.day2;
       this.day3 = getWeatherAtIndex(23) || this.day3;
 
+
+
       console.log('Dati del meteo:', this.weatherData);
     });
   }
 
-  // getWeather(): void {
-  //   this.meteoAppSvc.getWeather(this.city).subscribe((data) => {
-  //     this.weatherData = data;
 
-  //   const getWeatherAtIndex = (index: number): IGiorno | null => {
-  //     if (this.weatherData.list && this.weatherData.list.length > index) {
-  //       const dataGiorno = this.weatherData.list[index].dt_txt;
-  //       const infoGiorno = new Date(dataGiorno);
-  //       const giornoSettimana = format(infoGiorno, 'EEEE', { locale: it });
 
-  //       return {
-  //         city: this.weatherData.city.name,
-  //         giorno: giornoSettimana,
-  //         tempo: this.weatherData.list[index].weather[0].main,
-  //         temperatura: ""
-  //       };
-  //     }
-  //     return null;
-  //   };
+  // saveMyMeteo(){
+  //   if (this.myMeteo.length === 0 || this.userName === this.myMeteo[0]) {
 
-  //   this.today = getWeatherAtIndex(0) || this.today;
-  //   this.day1 = getWeatherAtIndex(7) || this.day1;
-  //   this.day2 = getWeatherAtIndex(15) || this.day2;
-  //   this.day3 = getWeatherAtIndex(23) || this.day3;
-
-  //     console.log('Dati del meteo:', this.weatherData);
-  //   });
+  //     this.myMeteo.push(this.weatherData.city.name);
+  //     console.log('Città aggiunta ai preferiti con successo:', this.myMeteo);
+  //   } else {
+  //     console.log('L\'utente non è autorizzato ad aggiungere città ai preferiti.');
+  //   }
   // }
-
 
 }
 
