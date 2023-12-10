@@ -58,30 +58,83 @@ export class ChiSiamoComponent {
     this.meteoAppSvc.getWeather(this.city).subscribe((data) => {
       this.weatherData = data;
 
-    const getWeatherAtIndex = (index: number): IGiorno | null => {
-      if (this.weatherData.list && this.weatherData.list.length > index) {
-        const dataGiorno = this.weatherData.list[index].dt_txt;
-        const infoGiorno = new Date(dataGiorno);
-        const giornoSettimana = format(infoGiorno, 'EEEE', { locale: it });
+      const getWeatherAtIndex = (index: number): IGiorno | null => {
+        if (this.weatherData.list && this.weatherData.list.length > index) {
+          const dataGiorno = this.weatherData.list[index].dt_txt;
+          const infoGiorno = new Date(dataGiorno);
+          const giornoSettimana = format(infoGiorno, 'EEEE', { locale: it });
+          const condition = this.weatherData.list[index].weather[0].main;
+          let weatherImage = this.weatherData.list[index].weather[0].icon;
 
-        return {
-          city: this.weatherData.city.name,
-          giorno: giornoSettimana,
-          tempo: this.weatherData.list[index].weather[0].main,
-          temperatura: ""
-        };
-      }
-      return null;
-    };
+          // switch (condition) {
+          //   case 'Clouds':
+          //     weatherImage = this.weatherData.list[index].weather[0].icon;
+          //     break;
+          //   case 'Rain':
+          //     weatherImage = this.weatherData.list[index].weather[0].icon;
+          //     break;
+          //   case 'Clear':
+          //     weatherImage = this.weatherData.list[index].weather[0].icon;
+          //     break;
+          //   case 'Snow':
+          //     weatherImage = this.weatherData.list[index].weather[0].icon;
+          //     break;
 
-    this.today = getWeatherAtIndex(0) || this.today;
-    this.day1 = getWeatherAtIndex(7) || this.day1;
-    this.day2 = getWeatherAtIndex(15) || this.day2;
-    this.day3 = getWeatherAtIndex(23) || this.day3;
+          //   default:
+          //     weatherImage = this.weatherData.list[index].weather[0].icon;
+          // }
+
+          return {
+            city: this.weatherData.city.name,
+            giorno: giornoSettimana,
+            tempo: weatherImage,
+            temperatura: ""
+          };
+        }
+        return null;
+      };
+
+      this.today = getWeatherAtIndex(0) || this.today;
+      this.day1 = getWeatherAtIndex(7) || this.day1;
+      this.day2 = getWeatherAtIndex(15) || this.day2;
+      this.day3 = getWeatherAtIndex(23) || this.day3;
 
       console.log('Dati del meteo:', this.weatherData);
     });
   }
 
+  // getWeather(): void {
+  //   this.meteoAppSvc.getWeather(this.city).subscribe((data) => {
+  //     this.weatherData = data;
+
+  //   const getWeatherAtIndex = (index: number): IGiorno | null => {
+  //     if (this.weatherData.list && this.weatherData.list.length > index) {
+  //       const dataGiorno = this.weatherData.list[index].dt_txt;
+  //       const infoGiorno = new Date(dataGiorno);
+  //       const giornoSettimana = format(infoGiorno, 'EEEE', { locale: it });
+
+  //       return {
+  //         city: this.weatherData.city.name,
+  //         giorno: giornoSettimana,
+  //         tempo: this.weatherData.list[index].weather[0].main,
+  //         temperatura: ""
+  //       };
+  //     }
+  //     return null;
+  //   };
+
+  //   this.today = getWeatherAtIndex(0) || this.today;
+  //   this.day1 = getWeatherAtIndex(7) || this.day1;
+  //   this.day2 = getWeatherAtIndex(15) || this.day2;
+  //   this.day3 = getWeatherAtIndex(23) || this.day3;
+
+  //     console.log('Dati del meteo:', this.weatherData);
+  //   });
+  // }
+
 
 }
+
+
+// appunti
+// Clouds, Rain, Clear, Snow

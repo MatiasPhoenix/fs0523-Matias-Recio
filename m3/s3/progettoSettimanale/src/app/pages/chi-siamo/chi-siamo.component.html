@@ -1,33 +1,36 @@
 
+<div class="container text-center py-5">
 
-<input [(ngModel)]="city" name="name" placeholder="Inserisci il nome della città" />
-<button (click)="getWeather()">Ottieni Meteo</button>
+  <input [(ngModel)]="city" name="name" placeholder="Inserisci il nome della città" />
+  <button (click)="getWeather()">Ottieni Meteo</button>
 
+  <img src="http://openweathermap.org/img/wn/{{weatherData.list[0].weather[0].icon}}@2x.png" alt="">
 
-<div class="row">
-  <p> {{today.city}}</p>
-  <div class="col-6">
+  <div class="row">
+    <p> {{today.city}}</p>
+    <div class="col-6">
 
-    <p>{{ today.giorno }}</p>
-    <p>{{ today.tempo }}</p>
+      <p>{{ today.giorno }}</p>
+      <img src="http://openweathermap.org/img/wn/{{weatherData.list[0].weather[0].icon}}@2x.png" alt="">
+    </div>
+
+    <div class="col-6">
+
+      <p>{{ day1.giorno }}</p>
+      <img src="http://openweathermap.org/img/wn/{{weatherData.list[7].weather[0].icon}}@2x.png" alt="">
+    </div>
+
+    <div class="col-6">
+
+      <p>{{ day2.giorno }}</p>
+      <img src="http://openweathermap.org/img/wn/{{weatherData.list[15].weather[0].icon}}@2x.png" alt="">
+    </div>
+
+    <div class="col-6">
+
+      <p>{{ day3.giorno }}</p>
+      <img src="http://openweathermap.org/img/wn/{{weatherData.list[23].weather[0].icon}}@2x.png" alt="">
+    </div>
+
   </div>
-
-  <div class="col-6">
-
-    <p>{{ day1.giorno }}</p>
-    <p>{{ day1.tempo }}</p>
-  </div>
-
-  <div class="col-6">
-
-    <p>{{ day2.giorno }}</p>
-    <p>{{ day2.tempo }}</p>
-  </div>
-
-  <div class="col-6">
-
-    <p>{{ day3.giorno }}</p>
-    <p>{{ day3.tempo }}</p>
-  </div>
-
 </div>
