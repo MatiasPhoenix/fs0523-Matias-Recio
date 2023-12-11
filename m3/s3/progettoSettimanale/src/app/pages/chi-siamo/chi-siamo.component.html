@@ -6,7 +6,7 @@
     <input [(ngModel)]="city" name="name" placeholder="nome della città" />
     <button (click)="getWeather()">Ottieni Meteo</button>
 
-    <img (click)="saveMyMeteo(city)" src="http://openweathermap.org/img/wn/{{weatherData.list[0].weather[0].icon}}@2x.png" alt="">
+    <img (click)="saveMyMeteo()" src="http://openweathermap.org/img/wn/{{weatherData.list[0].weather[0].icon}}@2x.png" alt="">
 
 
   <div class="row d-flex justify-content-center">

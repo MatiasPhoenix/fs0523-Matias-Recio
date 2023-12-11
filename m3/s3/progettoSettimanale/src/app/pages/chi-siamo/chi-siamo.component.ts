@@ -27,6 +27,7 @@ export class ChiSiamoComponent {
   city = '';
   weatherData: any;
 
+
   oggiGiorno = "Oggi";
   domaniGiorno = "Domani";
 
@@ -74,24 +75,6 @@ export class ChiSiamoComponent {
           const condition = this.weatherData.list[index].weather[0].main;
           let weatherImage = this.weatherData.list[index].weather[0].icon;
 
-          // switch (condition) {
-          //   case 'Clouds':
-          //     weatherImage = this.weatherData.list[index].weather[0].icon;
-          //     break;
-          //   case 'Rain':
-          //     weatherImage = this.weatherData.list[index].weather[0].icon;
-          //     break;
-          //   case 'Clear':
-          //     weatherImage = this.weatherData.list[index].weather[0].icon;
-          //     break;
-          //   case 'Snow':
-          //     weatherImage = this.weatherData.list[index].weather[0].icon;
-          //     break;
-
-          //   default:
-          //     weatherImage = this.weatherData.list[index].weather[0].icon;
-          // }
-
           return {
             city: this.weatherData.city.name,
             giorno: giornoSettimana,
@@ -107,23 +90,22 @@ export class ChiSiamoComponent {
       this.day2 = getWeatherAtIndex(15) || this.day2;
       this.day3 = getWeatherAtIndex(23) || this.day3;
 
-
-
       console.log('Dati del meteo:', this.weatherData);
     });
   }
 
+  saveMyMeteo(): void {
+    const cityName = this.weatherData.city.name;
+
+    if (!this.myMeteo.includes(cityName)) {
+      this.myMeteo.push(cityName);
+      console.log('Città aggiunta ai preferiti:', this.myMeteo);
+    } else {
+      console.log('La città è già presente nei preferiti.');
+    }
+  }
 
 
-  // saveMyMeteo(){
-  //   if (this.myMeteo.length === 0 || this.userName === this.myMeteo[0]) {
-
-  //     this.myMeteo.push(this.weatherData.city.name);
-  //     console.log('Città aggiunta ai preferiti con successo:', this.myMeteo);
-  //   } else {
-  //     console.log('L\'utente non è autorizzato ad aggiungere città ai preferiti.');
-  //   }
-  // }
 
 }
 
